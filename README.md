@@ -1,16 +1,27 @@
 # Wayne County tax sale desk
 
-Temporary GitHub Pages workbook: public Treasurer auction list, matched to Plottia by parcel ID, then scored with AVM / rent / flip / cash-flow math.
+React workbook for the public Treasurer auction, scored against Plottia.
 
 Live: https://israelvaday.github.io/wayne-tax-sale/
 
-Official bidding stays on [waynecountytreasurermi.com](https://waynecountytreasurermi.com/).
+## App structure
 
-## Refresh
+- **Overview** — auction calendar, match rate, score mix, cities
+- **Inventory** — sortable deal table + Plottia sheet
+- **Batches** — 56 close windows, click to filter
+
+## Refresh data
 
 ```bash
-node --use-system-ca scripts/scrape.mjs
-node scripts/enrich-plottia.mjs
+npm run scrape
+npm run enrich
+node --use-system-ca scripts/fetch-catalog.mjs
+npm run build
 ```
 
-`enrich-plottia.mjs` needs `DATABASE_URL` (reads `../../.env.local`).
+## Dev
+
+```bash
+npm install
+npm run dev
+```
