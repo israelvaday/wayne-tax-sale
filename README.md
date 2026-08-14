@@ -1,27 +1,16 @@
-# Wayne County tax sale → Plottia
+# Wayne County tax sale desk
 
-Temporary GitHub Pages workbook for the public Wayne County Treasurer auction list, with one-click jumps into Plottia by parcel ID.
+Temporary GitHub Pages workbook: public Treasurer auction list, matched to Plottia by parcel ID, then scored with AVM / rent / flip / cash-flow math.
 
-Official bidding, deposits, and legal notices stay on [waynecountytreasurermi.com](https://waynecountytreasurermi.com/).
+Live: https://israelvaday.github.io/wayne-tax-sale/
 
-## Refresh the snapshot
+Official bidding stays on [waynecountytreasurermi.com](https://waynecountytreasurermi.com/).
+
+## Refresh
 
 ```bash
 node --use-system-ca scripts/scrape.mjs
+node scripts/enrich-plottia.mjs
 ```
 
-Writes `data/properties.json` and `data/meta.json`.
-
-## Local preview
-
-```bash
-npx --yes serve .
-```
-
-## Plottia deep links
-
-Each row opens:
-
-`https://plottia.com/?parcel={PARCEL_ID}&q={address}, {city}, MI {zip}`
-
-That needs the Plottia `?parcel=` / `/api/search?apn=` support from this same change set.
+`enrich-plottia.mjs` needs `DATABASE_URL` (reads `../../.env.local`).

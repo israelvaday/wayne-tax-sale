@@ -98,5 +98,11 @@
     "48240"
   ],
   "auctionStarts": "2026-09-08T09:00:00",
-  "auctionEnds": "2026-09-16T09:15:00"
+  "auctionEnds": "2026-09-16T09:15:00",
+  "enrichedAt": "2026-08-14T15:17:29.709Z",
+  "matched": 2814,
+  "matchRate": 93.9,
+  "scored": 2998,
+  "apnMatches": 2776,
+  "addressMatches": 38
 }
