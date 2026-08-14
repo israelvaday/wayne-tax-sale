@@ -104,5 +104,9 @@
   "matchRate": 93.9,
   "scored": 2998,
   "apnMatches": 2776,
-  "addressMatches": 38
+  "addressMatches": 38,
+  "countyRefreshedAt": "2026-08-14T16:05:38.038Z",
+  "countyOk": 2998,
+  "countyFail": 0,
+  "bundles": 94
 }
