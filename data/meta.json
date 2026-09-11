@@ -108,5 +108,7 @@
   "countyRefreshedAt": "2026-08-14T16:05:38.038Z",
   "countyOk": 2998,
   "countyFail": 0,
-  "bundles": 94
+  "bundles": 94,
+  "bidsRefreshedAt": "2026-09-11T19:38:28.759Z",
+  "withBid": 486
 }
