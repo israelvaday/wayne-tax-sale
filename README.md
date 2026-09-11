@@ -6,7 +6,8 @@ Live: https://israelvaday.github.io/wayne-tax-sale/#options
 
 ## App structure
 
-- **My options** — personal Wednesday bid book (quiet, high SEV, ACTIVE only)
+- **Saved** — your picks, kept in this browser after you close the tab
+- **My options** — Wednesday bid book (quiet, high SEV, ACTIVE only)
 - **Overview** — auction calendar, match rate, score mix, cities
 - **Inventory** — sortable deal table + Plottia sheet
 - **Batches** — close windows, click to filter
