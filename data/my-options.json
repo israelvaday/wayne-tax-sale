@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-11T19:15:44.487Z",
+  "pulled": "2026-09-12T19:43:35.331Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -15,10 +15,11 @@
   },
   "note": "$2,500 keeps you high bidder on one house at a time. Last 5 minutes can +5 soft-close. Bids cannot be retracted. Pay within 72 hours of the sale close.",
   "counts": {
-    "checked": 127,
-    "active": 119,
-    "removed": 8,
-    "picked": 30
+    "checked": 35,
+    "active": 30,
+    "removed": 0,
+    "picked": 30,
+    "watching": 5
   },
   "picks": [
     {
@@ -41,7 +42,7 @@
       "open": 5300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 48,
+      "views": 54,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -55,7 +56,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/19324-albion-st-48234-d0a46839-1f0d-4d6d-bc33-77b098b8b34d",
       "lat": 42.43687554503132,
       "lng": -83.00556272636736,
-      "owner": "GERRY PRINGLE"
+      "owner": "GERRY PRINGLE",
+      "openingBid": 5300,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900367",
@@ -77,7 +80,7 @@
       "open": 11400,
       "currentBid": null,
       "bidCount": 0,
-      "views": 30,
+      "views": 32,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -91,7 +94,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/13445-maiden-st-48213-d3293d82-1fb7-479b-b420-f55c84d9ce57",
       "lat": 42.40782626404941,
       "lng": -82.97002975983617,
-      "owner": "DETROIT IMPROVEMENT"
+      "owner": "DETROIT IMPROVEMENT",
+      "openingBid": 11400,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900449",
@@ -113,7 +118,7 @@
       "open": 5700,
       "currentBid": null,
       "bidCount": 0,
-      "views": 31,
+      "views": 32,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -127,7 +132,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/17844-annott-st-48205-77d3c2f3-2ef6-4d2b-bff5-df09e0a14c42",
       "lat": 42.4261193835126,
       "lng": -83.0015442109205,
-      "owner": "HENLEY"
+      "owner": "HENLEY",
+      "openingBid": 5700,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900448",
@@ -149,7 +156,7 @@
       "open": 15700,
       "currentBid": null,
       "bidCount": 0,
-      "views": 38,
+      "views": 39,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -163,7 +170,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/19366-bradford-st-48205-87c5061e-6a96-49ed-9e07-0fdcb0834444",
       "lat": 42.43738332382928,
       "lng": -83.00076412920738,
-      "owner": "MICHELLE JORDAN"
+      "owner": "MICHELLE JORDAN",
+      "openingBid": 15700,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900840",
@@ -185,7 +194,7 @@
       "open": 6500,
       "currentBid": null,
       "bidCount": 0,
-      "views": 31,
+      "views": 34,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -199,7 +208,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/highland-park/258-w-nevada-st-48203-473b130b-a3e6-43c4-b48f-5d09beb2c6a3",
       "lat": 42.424486831549665,
       "lng": -83.10700755358744,
-      "owner": "WILLIE MILLS"
+      "owner": "WILLIE MILLS",
+      "openingBid": 6500,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900873",
@@ -221,7 +232,7 @@
       "open": 4800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 18,
+      "views": 19,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -235,7 +246,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/highland-park/16511-log-cabin-st-48203-d2b500c1-4de5-4a03-8b59-1bfaae2de3ca",
       "lat": 42.41287778716065,
       "lng": -83.12204409905785,
-      "owner": "PLAN O LLC"
+      "owner": "PLAN O LLC",
+      "openingBid": 4800,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901045",
@@ -257,7 +270,7 @@
       "open": 5100,
       "currentBid": null,
       "bidCount": 0,
-      "views": 43,
+      "views": 49,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -271,7 +284,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/12066-american-st-48204-22d2b225-8b45-4bd9-a084-f4bd78f2e292",
       "lat": 42.37709407116927,
       "lng": -83.14427648236776,
-      "owner": "JIMMIE JONES"
+      "owner": "JIMMIE JONES",
+      "openingBid": 5100,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901071",
@@ -293,7 +308,7 @@
       "open": 7800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 19,
+      "views": 21,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -307,7 +322,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/15410-griggs-st-48238-f448b7b3-541b-4f6d-9c1f-b40580b4c3e4",
       "lat": 42.40444602303839,
       "lng": -83.16267575627138,
-      "owner": "RAKEYA YOUNG"
+      "owner": "RAKEYA YOUNG",
+      "openingBid": 7800,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901103",
@@ -329,7 +346,7 @@
       "open": 8000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 22,
+      "views": 30,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -343,7 +360,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/17203-runyon-st-48234-01614f7d-036f-4b86-ab10-4cc1b49d9900",
       "lat": 42.4214455814657,
       "lng": -83.00689824529198,
-      "owner": "NADINE PLACIDE"
+      "owner": "NADINE PLACIDE",
+      "openingBid": 8000,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901101",
@@ -365,7 +384,7 @@
       "open": 5200,
       "currentBid": 5200,
       "bidCount": 1,
-      "views": 40,
+      "views": 44,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -379,7 +398,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/5510-field-st-48213-39408781-e51e-4e03-8923-4796d63c33bc",
       "lat": 42.37851404508843,
       "lng": -83.02048972575355,
-      "owner": "LATONYA WATKINS"
+      "owner": "LATONYA WATKINS",
+      "openingBid": 5200,
+      "lastBidAt": "2026-09-08T21:41:23"
     },
     {
       "auctionId": "260901085",
@@ -401,7 +422,7 @@
       "open": 3900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 43,
+      "views": 50,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -415,7 +436,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/8103-hendrie-st-48213-ea96d9fd-ef73-418c-9bc8-3c9f11cd22af",
       "lat": 42.383050160380726,
       "lng": -83.01628715874139,
-      "owner": "SAVANNNAH HANNAH"
+      "owner": "SAVANNNAH HANNAH",
+      "openingBid": 3900,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901197",
@@ -437,7 +460,7 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 15,
+      "views": 16,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -451,7 +474,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/13907-eastwood-st-48205-396d2b84-eda5-47f5-b381-c552f860e7cb",
       "lat": 42.433468045209295,
       "lng": -82.98048722557186,
-      "owner": "STARMIKQUA DAVIS"
+      "owner": "STARMIKQUA DAVIS",
+      "openingBid": 5000,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901206",
@@ -473,7 +498,7 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 8,
+      "views": 10,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 4,
@@ -487,7 +512,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/14830-maddelein-st-48205-cf294de3-7030-497e-9252-4a45bae8521e",
       "lat": 42.43588558135293,
       "lng": -82.96906099872825,
-      "owner": "ANTONIO ANDERSON"
+      "owner": "ANTONIO ANDERSON",
+      "openingBid": 5000,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901209",
@@ -509,7 +536,7 @@
       "open": 5800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 12,
+      "views": 13,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 2,
@@ -523,7 +550,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/15017-manning-st-48205-065cc74c-95c6-4c3d-bbd1-fb8220ebf31c",
       "lat": 42.441183749623946,
       "lng": -82.96654998452647,
-      "owner": "TREVONNA HOOPER"
+      "owner": "TREVONNA HOOPER",
+      "openingBid": 5800,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901196",
@@ -545,7 +574,7 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 9,
+      "views": 10,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -559,7 +588,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/15497-faircrest-st-48205-eb7e6e38-2191-41a9-ade5-90c18c30d654",
       "lat": 42.43265505856204,
       "lng": -82.96108565494808,
-      "owner": "FORTUNE GROUP TRUST"
+      "owner": "FORTUNE GROUP TRUST",
+      "openingBid": 5000,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901226",
@@ -581,7 +612,7 @@
       "open": 7300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 4,
+      "views": 6,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 4,
@@ -595,7 +626,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/18453-westphalia-st-48205-88c8e6c8-5753-40c1-bfa1-e21627233ff8",
       "lat": 42.43010702850783,
       "lng": -82.99261396658086,
-      "owner": "TANYA DAVENPORT"
+      "owner": "TANYA DAVENPORT",
+      "openingBid": 7300,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901234",
@@ -617,7 +650,7 @@
       "open": 7300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 14,
+      "views": 17,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -631,7 +664,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/17149-strasburg-st-48205-54799296-3446-4e09-ba0b-fe684155dcf9",
       "lat": 42.42283704519198,
       "lng": -82.99834122617158,
-      "owner": "CURTIS DUBOSE"
+      "owner": "CURTIS DUBOSE",
+      "openingBid": 7300,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901235",
@@ -653,7 +688,7 @@
       "open": 6800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 9,
+      "views": 11,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -667,7 +702,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/19751-dresden-st-48205-12df45c1-16ea-4722-acf9-dccb0ed3cf9b",
       "lat": 42.44100578621869,
       "lng": -83.00039060930642,
-      "owner": "KINGMAN HOLDINGS LLC"
+      "owner": "KINGMAN HOLDINGS LLC",
+      "openingBid": 6800,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901388",
@@ -689,7 +726,7 @@
       "open": 12400,
       "currentBid": null,
       "bidCount": 0,
-      "views": 28,
+      "views": 31,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -703,7 +740,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/14069-strathmoor-st-48227-f44c7621-0144-44c6-8513-118121649fef",
       "lat": 42.38919504461255,
       "lng": -83.18759922577472,
-      "owner": "DAESHON HARRIS"
+      "owner": "DAESHON HARRIS",
+      "openingBid": 12400,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901418",
@@ -725,7 +764,7 @@
       "open": 7800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 51,
+      "views": 56,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -739,7 +778,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/19355-harlow-st-48235-af79c822-f53d-4062-94bf-5db56c62b523",
       "lat": 42.43308456596672,
       "lng": -83.2165924846917,
-      "owner": "CHASE JABS"
+      "owner": "CHASE JABS",
+      "openingBid": 7800,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901403",
@@ -761,7 +802,7 @@
       "open": 6600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 13,
+      "views": 15,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -775,7 +816,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/9597-montrose-st-48227-2bf46130-8511-4821-887e-aefe0080b3a3",
       "lat": 42.36677706150165,
       "lng": -83.20007998465445,
-      "owner": "DETROIT LAND BANK AUTHORITY"
+      "owner": "DETROIT LAND BANK AUTHORITY",
+      "openingBid": 6600,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901402",
@@ -797,7 +840,7 @@
       "open": 6900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 18,
+      "views": 19,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -811,7 +854,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/9646-montrose-st-48227-0f535590-aa52-4ecc-9778-840a9dbe5b6c",
       "lat": 42.36746078547495,
       "lng": -83.1994243608467,
-      "owner": "GERALD ROBERTS"
+      "owner": "GERALD ROBERTS",
+      "openingBid": 6900,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900362",
@@ -847,7 +892,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/12617-hampshire-st-48213-36e0566a-7321-4270-b7ef-e73996b4d9da",
       "lat": 42.402714234140156,
       "lng": -82.97743175194579,
-      "owner": "BERTHA GRAY"
+      "owner": "BERTHA GRAY",
+      "openingBid": 9000,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900407",
@@ -883,7 +930,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/14726-manning-st-48205-41748826-f427-42cd-ae3c-772366c0fd67",
       "lat": 42.44061449698773,
       "lng": -82.97118301844668,
-      "owner": "VERDELL MCCALL"
+      "owner": "VERDELL MCCALL",
+      "openingBid": 8600,
+      "lastBidAt": null
     },
     {
       "auctionId": "260901468",
@@ -919,7 +968,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/14896-dolphin-st-48223-5e0aa7ba-afec-407d-8437-a4897c3a0349",
       "lat": 42.39678454432271,
       "lng": -83.25884422602654,
-      "owner": "JOYCE ROBISON"
+      "owner": "JOYCE ROBISON",
+      "openingBid": 5900,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900554",
@@ -941,7 +992,7 @@
       "open": 15600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 17,
+      "views": 18,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -955,7 +1006,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/15095-littlefield-st-48227-4167bc83-d47f-4778-bdd8-6c575e005447",
       "lat": 42.401324544650684,
       "lng": -83.17616372601812,
-      "owner": "PAUL JONES"
+      "owner": "PAUL JONES",
+      "openingBid": 15600,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900070",
@@ -977,7 +1030,7 @@
       "open": 6600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 21,
+      "views": 24,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -991,7 +1044,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/highland-park/19663-russell-st-48203-c5cf2009-0a02-4cc2-8cae-1b3fc0aa222b",
       "lat": 42.43841406317621,
       "lng": -83.09107598693838,
-      "owner": "RAYMOND CLEVELAND"
+      "owner": "RAYMOND CLEVELAND",
+      "openingBid": 6600,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900927",
@@ -1027,7 +1082,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/3032-pasadena-st-48238-e9e2a051-945a-4323-9854-c090b0d6ffa2",
       "lat": 42.39368770050306,
       "lng": -83.1287660925496,
-      "owner": "MONICA DIXON"
+      "owner": "MONICA DIXON",
+      "openingBid": 12500,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900922",
@@ -1049,7 +1106,7 @@
       "open": 9500,
       "currentBid": null,
       "bidCount": 0,
-      "views": 11,
+      "views": 13,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -1063,7 +1120,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/detroit/3284-carter-st-48206-50cae034-750a-4ecf-b8bb-51ad13b0a789",
       "lat": 42.36760419113523,
       "lng": -83.11377459089873,
-      "owner": "PAIGE CAREY"
+      "owner": "PAIGE CAREY",
+      "openingBid": 9500,
+      "lastBidAt": null
     },
     {
       "auctionId": "260900744",
@@ -1099,7 +1158,9 @@
       "plottiaUrl": "https://plottia.com/property/mi/redford/7299-dacosta-48239-41038e74-fdab-4f7c-8cf8-c03604434c63",
       "lat": 42.343227562665184,
       "lng": -83.25782798609809,
-      "owner": "HARRY TAYLOR"
+      "owner": "HARRY TAYLOR",
+      "openingBid": 20600,
+      "lastBidAt": null
     }
   ],
   "pulledOff": [],
@@ -1117,7 +1178,7 @@
       "open": 19400,
       "currentBid": 28700,
       "bidCount": 12,
-      "views": 690,
+      "views": 744,
       "saleStatus": "ACTIVE",
       "why": "Your house — 13884 Gallagher. Already in play.",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900021&batchId=1",
@@ -1131,7 +1192,15 @@
       "yearBuilt": 1939,
       "avm": 79000,
       "rent": 1119,
-      "owner": "STELLINA LOVE"
+      "owner": "STELLINA LOVE",
+      "itemStatus": "IN PROGRESS",
+      "openingBid": 19400,
+      "extendedEnd": null,
+      "lastBidAt": "2026-09-11T00:54:29",
+      "window": "Wed 9:15–11:00",
+      "windowId": "early",
+      "windowOrder": 1,
+      "hot": true
     },
     {
       "auctionId": "260901622",
@@ -1146,7 +1215,7 @@
       "open": 5600,
       "currentBid": 5600,
       "bidCount": 1,
-      "views": 66,
+      "views": 77,
       "saleStatus": "ACTIVE",
       "why": "Next door Gallagher commercial lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901622&batchId=32",
@@ -1160,7 +1229,15 @@
       "yearBuilt": 1930,
       "avm": 83400,
       "rent": 0,
-      "owner": "DENNIS MABEE"
+      "owner": "DENNIS MABEE",
+      "itemStatus": "IN PROGRESS",
+      "openingBid": 5600,
+      "extendedEnd": null,
+      "lastBidAt": "2026-09-08T13:15:56",
+      "window": "Thu leftover lots",
+      "windowId": "thu",
+      "windowOrder": 6,
+      "hot": false
     },
     {
       "auctionId": "260901623",
@@ -1175,7 +1252,7 @@
       "open": 2000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 50,
+      "views": 57,
       "saleStatus": "ACTIVE",
       "why": "Same street Gallagher vacant lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901623&batchId=32",
@@ -1189,7 +1266,15 @@
       "yearBuilt": 0,
       "avm": 139000,
       "rent": 0,
-      "owner": "LORETTA YOUNG"
+      "owner": "LORETTA YOUNG",
+      "itemStatus": "IN PROGRESS",
+      "openingBid": 2000,
+      "extendedEnd": null,
+      "lastBidAt": null,
+      "window": "Thu leftover lots",
+      "windowId": "thu",
+      "windowOrder": 6,
+      "hot": false
     },
     {
       "auctionId": "260900003",
@@ -1204,7 +1289,7 @@
       "open": 10900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 751,
+      "views": 800,
       "saleStatus": "ACTIVE",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
@@ -1218,7 +1303,15 @@
       "yearBuilt": 1952,
       "avm": 122000,
       "rent": 1181,
-      "owner": "DEMETRIS YOUNG"
+      "owner": "DEMETRIS YOUNG",
+      "itemStatus": "IN PROGRESS",
+      "openingBid": 10900,
+      "extendedEnd": null,
+      "lastBidAt": null,
+      "window": "Wed 9:15–11:00",
+      "windowId": "early",
+      "windowOrder": 1,
+      "hot": false
     },
     {
       "auctionId": "260900002",
@@ -1233,7 +1326,7 @@
       "open": 5900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 1166,
+      "views": 1220,
       "saleStatus": "ACTIVE",
       "why": "106 W Greendale",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900002&batchId=1",
@@ -1247,7 +1340,15 @@
       "yearBuilt": 1939,
       "avm": 150000,
       "rent": 751,
-      "owner": "KAREN BOZE"
+      "owner": "KAREN BOZE",
+      "itemStatus": "IN PROGRESS",
+      "openingBid": 5900,
+      "extendedEnd": null,
+      "lastBidAt": null,
+      "window": "Wed 9:15–11:00",
+      "windowId": "early",
+      "windowOrder": 1,
+      "hot": false
     }
   ]
 }
