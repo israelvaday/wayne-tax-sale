@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-12T19:44:23.963Z",
+  "pulled": "2026-09-12T19:48:05.812Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -1178,7 +1178,7 @@
       "open": 19400,
       "currentBid": 28700,
       "bidCount": 12,
-      "views": 744,
+      "views": 745,
       "saleStatus": "ACTIVE",
       "why": "Your house — 13884 Gallagher. Already in play.",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900021&batchId=1",
