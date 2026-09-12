@@ -1,6 +1,6 @@
 /**
- * Re-live-check every pick in my-options.json (STATUS, bids, views, close time).
- * Works from the Vite source repo or the GitHub Pages repo root.
+ * Re-live-check every pick, pulled-off, and watching house
+ * (STATUS, bids, views, close time). Writes both data/ copies.
  */
 import { readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
@@ -38,7 +38,7 @@ async function post(path, body, attempt = 1) {
 }
 
 async function findBook() {
-  for (const rel of ['data/my-options.json', 'public/data/my-options.json']) {
+  for (const rel of ['public/data/my-options.json', 'data/my-options.json']) {
     try {
       const path = join(ROOT, rel)
       const raw = await readFile(path, 'utf8')
@@ -62,38 +62,52 @@ function windowFor(batchId, end) {
   return { id: 'late', label: 'Wed 3:45–4:45', order: 5 }
 }
 
-const { path, book } = await findBook()
-const rows = [...(book.picks || []), ...(book.pulledOff || [])]
-const seen = new Set()
-const all = rows.filter((r) => {
-  if (!r?.auctionId || seen.has(r.auctionId)) return false
-  seen.add(r.auctionId)
-  return true
-})
+function applyDetail(pick, d) {
+  pick.saleStatus = String(d.STATUS || '').trim()
+  pick.itemStatus = String(d.ITEM_STATUS || '').trim()
+  pick.currentBid = money(d.CURRENT_BID_AMT)
+  pick.bidCount = Number(d.NO_OF_BIDS || 0) || 0
+  pick.views = Number(d.VIEW_CTR || 0) || 0
+  pick.openingBid = money(d.AI_OPENING_BID_AMT) ?? pick.open
+  pick.open = money(d.AI_OPENING_BID_AMT) ?? pick.open
+  pick.sev = money(d.AI_SEV) ?? pick.sev
+  pick.batchId = d.AB_ID == null ? pick.batchId : String(d.AB_ID)
+  pick.batchEnds = d.AB_END_DT || pick.batchEnds
+  pick.extendedEnd = d.EXTD_BIDDING_END_DT || null
+  pick.lastBidAt = d.CURRENT_BID_DT || null
+  const win = windowFor(pick.batchId, pick.batchEnds)
+  pick.window = win.label
+  pick.windowId = win.id
+  pick.windowOrder = win.order
+  pick.hot = !!(pick.currentBid && pick.sev && pick.currentBid > pick.sev * 0.45)
+  delete pick.refreshError
+}
+
+async function refreshOne(pick) {
+  const rows = await post('/Items/GetAuctionItemDetails', { AI_ID: pick.auctionId })
+  const d = Array.isArray(rows) ? rows[0] : rows
+  applyDetail(pick, d)
+}
+
+function uniq(rows) {
+  const seen = new Set()
+  return (rows || []).filter((r) => {
+    if (!r?.auctionId || seen.has(r.auctionId)) return false
+    seen.add(r.auctionId)
+    return true
+  })
+}
+
+const { book } = await findBook()
+const bookRows = uniq([...(book.picks || []), ...(book.pulledOff || [])])
+const watching = uniq(book.watching || [])
+const all = uniq([...bookRows, ...watching])
 
 let ok = 0
 let fail = 0
 for (const pick of all) {
   try {
-    const rows = await post('/Items/GetAuctionItemDetails', { AI_ID: pick.auctionId })
-    const d = Array.isArray(rows) ? rows[0] : rows
-    pick.saleStatus = String(d.STATUS || '').trim()
-    pick.itemStatus = String(d.ITEM_STATUS || '').trim()
-    pick.currentBid = money(d.CURRENT_BID_AMT)
-    pick.bidCount = Number(d.NO_OF_BIDS || 0) || 0
-    pick.views = Number(d.VIEW_CTR || 0) || 0
-    pick.openingBid = money(d.AI_OPENING_BID_AMT) ?? pick.open
-    pick.open = money(d.AI_OPENING_BID_AMT) ?? pick.open
-    pick.sev = money(d.AI_SEV) ?? pick.sev
-    pick.batchId = d.AB_ID == null ? pick.batchId : String(d.AB_ID)
-    pick.batchEnds = d.AB_END_DT || pick.batchEnds
-    pick.extendedEnd = d.EXTD_BIDDING_END_DT || null
-    pick.lastBidAt = d.CURRENT_BID_DT || null
-    const win = windowFor(pick.batchId, pick.batchEnds)
-    pick.window = win.label
-    pick.windowId = win.id
-    pick.windowOrder = win.order
-    pick.hot = !!(pick.currentBid && pick.sev && pick.currentBid > pick.sev * 0.45)
+    await refreshOne(pick)
     ok++
   } catch (err) {
     pick.refreshError = String(err.message || err)
@@ -102,12 +116,60 @@ for (const pick of all) {
   await sleep(40)
 }
 
-const active = all.filter((p) => p.saleStatus === 'ACTIVE')
-const dead = all.filter((p) => p.saleStatus && p.saleStatus !== 'ACTIVE')
+const pool = bookRows
+const active = pool.filter((p) => p.saleStatus === 'ACTIVE')
+const dead = pool.filter((p) => p.saleStatus && p.saleStatus !== 'ACTIVE')
 active.sort((a, b) => (a.windowOrder || 0) - (b.windowOrder || 0) || Number(a.batchId) - Number(b.batchId))
 book.pulled = new Date().toISOString()
 book.picks = active
 book.pulledOff = dead
-book.counts = { checked: all.length, active: active.length, removed: dead.length, picked: active.length }
-await writeFile(path, JSON.stringify(book, null, 2))
-console.log(`refreshed ${path} ok=${ok} fail=${fail} active=${active.length} removed=${dead.length}`)
+book.watching = watching
+book.counts = {
+  checked: all.length,
+  active: active.length,
+  removed: dead.length,
+  picked: active.length,
+  watching: watching.length,
+}
+
+const payload = JSON.stringify(book, null, 2)
+for (const rel of ['public/data/my-options.json', 'data/my-options.json']) {
+  try {
+    await writeFile(join(ROOT, rel), payload)
+  } catch {
+    // source or pages repo may only have one of these
+  }
+}
+
+for (const rel of ['public/data/properties.json', 'data/properties.json']) {
+  try {
+    const listPath = join(ROOT, rel)
+    const list = JSON.parse(await readFile(listPath, 'utf8'))
+    const byId = new Map(all.map((p) => [String(p.auctionId), p]))
+    let patched = 0
+    for (const item of list) {
+      const live = byId.get(String(item.auctionId))
+      if (!live) continue
+      item.auctionStatus = live.saleStatus
+      item.itemStatus = live.itemStatus
+      item.currentBid = live.currentBid
+      item.bidCount = live.bidCount
+      item.views = live.views
+      item.openingBid = live.openingBid ?? item.openingBid
+      item.batchId = live.batchId
+      item.batchEnds = live.batchEnds
+      item.lastBidAt = live.lastBidAt
+      patched++
+    }
+    if (patched) await writeFile(listPath, JSON.stringify(list))
+  } catch {
+    // catalog not next to this book
+  }
+}
+
+const gallagher = watching.find((p) => p.auctionId === '260900021')
+console.log(`refreshed ok=${ok} fail=${fail} active=${active.length} removed=${dead.length} watching=${watching.length}`)
+if (gallagher) {
+  console.log(`gallagher bid=${gallagher.currentBid} bids=${gallagher.bidCount} views=${gallagher.views} status=${gallagher.saleStatus}`)
+}
+console.log(`pulled ${book.pulled}`)
