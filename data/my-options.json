@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-12T19:48:05.812Z",
+  "pulled": "2026-09-12T20:03:05.559Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -156,7 +156,7 @@
       "open": 15700,
       "currentBid": null,
       "bidCount": 0,
-      "views": 39,
+      "views": 40,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -764,7 +764,7 @@
       "open": 7800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 56,
+      "views": 57,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -1215,7 +1215,7 @@
       "open": 5600,
       "currentBid": 5600,
       "bidCount": 1,
-      "views": 77,
+      "views": 78,
       "saleStatus": "ACTIVE",
       "why": "Next door Gallagher commercial lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901622&batchId=32",
