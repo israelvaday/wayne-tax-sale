@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-13T04:33:05.629Z",
+  "pulled": "2026-09-13T04:48:05.636Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -1215,7 +1215,7 @@
       "open": 5600,
       "currentBid": 5600,
       "bidCount": 1,
-      "views": 80,
+      "views": 82,
       "saleStatus": "ACTIVE",
       "why": "Next door Gallagher commercial lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901622&batchId=32",
@@ -1252,7 +1252,7 @@
       "open": 2000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 58,
+      "views": 59,
       "saleStatus": "ACTIVE",
       "why": "Same street Gallagher vacant lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901623&batchId=32",
@@ -1289,7 +1289,7 @@
       "open": 10900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 809,
+      "views": 810,
       "saleStatus": "ACTIVE",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
