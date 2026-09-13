@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-13T22:48:06.504Z",
+  "pulled": "2026-09-13T23:03:06.185Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -1289,7 +1289,7 @@
       "open": 10900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 828,
+      "views": 829,
       "saleStatus": "ACTIVE",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
@@ -1326,7 +1326,7 @@
       "open": 5900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 1276,
+      "views": 1278,
       "saleStatus": "ACTIVE",
       "why": "106 W Greendale",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900002&batchId=1",
