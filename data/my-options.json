@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-14T03:48:06.017Z",
+  "pulled": "2026-09-14T04:03:06.554Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -1178,7 +1178,7 @@
       "open": 19400,
       "currentBid": 29700,
       "bidCount": 13,
-      "views": 819,
+      "views": 820,
       "saleStatus": "ACTIVE",
       "why": "Your house — 13884 Gallagher. Already in play.",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900021&batchId=1",
@@ -1289,7 +1289,7 @@
       "open": 10900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 842,
+      "views": 843,
       "saleStatus": "ACTIVE",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
