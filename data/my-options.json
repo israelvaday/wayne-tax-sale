@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-14T21:51:01.502Z",
+  "pulled": "2026-09-14T22:43:58.493Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -42,7 +42,7 @@
       "open": 5300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 63,
+      "views": 70,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -58,8 +58,7 @@
       "lng": -83.00556272636736,
       "owner": "GERRY PRINGLE",
       "openingBid": 5300,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900367",
@@ -81,7 +80,7 @@
       "open": 11400,
       "currentBid": null,
       "bidCount": 0,
-      "views": 35,
+      "views": 36,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -97,8 +96,7 @@
       "lng": -82.97002975983617,
       "owner": "DETROIT IMPROVEMENT",
       "openingBid": 11400,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900449",
@@ -120,7 +118,7 @@
       "open": 5700,
       "currentBid": null,
       "bidCount": 0,
-      "views": 36,
+      "views": 38,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -136,8 +134,7 @@
       "lng": -83.0015442109205,
       "owner": "HENLEY",
       "openingBid": 5700,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900448",
@@ -159,7 +156,7 @@
       "open": 15700,
       "currentBid": null,
       "bidCount": 0,
-      "views": 42,
+      "views": 44,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -175,8 +172,7 @@
       "lng": -83.00076412920738,
       "owner": "MICHELLE JORDAN",
       "openingBid": 15700,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900840",
@@ -198,7 +194,7 @@
       "open": 6500,
       "currentBid": null,
       "bidCount": 0,
-      "views": 39,
+      "views": 42,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -214,8 +210,7 @@
       "lng": -83.10700755358744,
       "owner": "WILLIE MILLS",
       "openingBid": 6500,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900873",
@@ -237,7 +232,7 @@
       "open": 4800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 20,
+      "views": 23,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -253,8 +248,7 @@
       "lng": -83.12204409905785,
       "owner": "PLAN O LLC",
       "openingBid": 4800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901045",
@@ -276,7 +270,7 @@
       "open": 5100,
       "currentBid": null,
       "bidCount": 0,
-      "views": 56,
+      "views": 58,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -292,8 +286,7 @@
       "lng": -83.14427648236776,
       "owner": "JIMMIE JONES",
       "openingBid": 5100,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901071",
@@ -331,8 +324,7 @@
       "lng": -83.16267575627138,
       "owner": "RAKEYA YOUNG",
       "openingBid": 7800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901103",
@@ -354,7 +346,7 @@
       "open": 8000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 39,
+      "views": 42,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -370,8 +362,7 @@
       "lng": -83.00689824529198,
       "owner": "NADINE PLACIDE",
       "openingBid": 8000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901101",
@@ -391,9 +382,9 @@
       "landUse": "Duplex (2 units, any combination)",
       "sev": 50600,
       "open": 5200,
-      "currentBid": 5200,
-      "bidCount": 1,
-      "views": 51,
+      "currentBid": 5500,
+      "bidCount": 4,
+      "views": 60,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -409,8 +400,7 @@
       "lng": -83.02048972575355,
       "owner": "LATONYA WATKINS",
       "openingBid": 5200,
-      "lastBidAt": "2026-09-08T21:41:23",
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-14T13:24:40"
     },
     {
       "auctionId": "260901085",
@@ -432,7 +422,7 @@
       "open": 3900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 53,
+      "views": 56,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -448,8 +438,7 @@
       "lng": -83.01628715874139,
       "owner": "SAVANNNAH HANNAH",
       "openingBid": 3900,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901197",
@@ -471,7 +460,7 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 18,
+      "views": 20,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -487,8 +476,7 @@
       "lng": -82.98048722557186,
       "owner": "STARMIKQUA DAVIS",
       "openingBid": 5000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901206",
@@ -510,7 +498,7 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 11,
+      "views": 13,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 4,
@@ -526,8 +514,7 @@
       "lng": -82.96906099872825,
       "owner": "ANTONIO ANDERSON",
       "openingBid": 5000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901209",
@@ -549,7 +536,7 @@
       "open": 5800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 13,
+      "views": 14,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 2,
@@ -565,8 +552,7 @@
       "lng": -82.96654998452647,
       "owner": "TREVONNA HOOPER",
       "openingBid": 5800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901196",
@@ -588,7 +574,7 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 12,
+      "views": 14,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -604,8 +590,7 @@
       "lng": -82.96108565494808,
       "owner": "FORTUNE GROUP TRUST",
       "openingBid": 5000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901226",
@@ -627,7 +612,7 @@
       "open": 7300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 6,
+      "views": 8,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 4,
@@ -643,8 +628,7 @@
       "lng": -82.99261396658086,
       "owner": "TANYA DAVENPORT",
       "openingBid": 7300,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901234",
@@ -666,7 +650,7 @@
       "open": 7300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 18,
+      "views": 20,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -682,8 +666,7 @@
       "lng": -82.99834122617158,
       "owner": "CURTIS DUBOSE",
       "openingBid": 7300,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901235",
@@ -705,7 +688,7 @@
       "open": 6800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 12,
+      "views": 14,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -721,8 +704,7 @@
       "lng": -83.00039060930642,
       "owner": "KINGMAN HOLDINGS LLC",
       "openingBid": 6800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901388",
@@ -760,8 +742,7 @@
       "lng": -83.18759922577472,
       "owner": "DAESHON HARRIS",
       "openingBid": 12400,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901418",
@@ -783,7 +764,7 @@
       "open": 7800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 68,
+      "views": 73,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -799,8 +780,7 @@
       "lng": -83.2165924846917,
       "owner": "CHASE JABS",
       "openingBid": 7800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901403",
@@ -822,7 +802,7 @@
       "open": 6600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 22,
+      "views": 24,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -838,8 +818,7 @@
       "lng": -83.20007998465445,
       "owner": "DETROIT LAND BANK AUTHORITY",
       "openingBid": 6600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901402",
@@ -861,7 +840,7 @@
       "open": 6900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 22,
+      "views": 24,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -877,8 +856,7 @@
       "lng": -83.1994243608467,
       "owner": "GERALD ROBERTS",
       "openingBid": 6900,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900362",
@@ -916,8 +894,7 @@
       "lng": -82.97743175194579,
       "owner": "BERTHA GRAY",
       "openingBid": 9000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900407",
@@ -939,7 +916,7 @@
       "open": 8600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 22,
+      "views": 29,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 4,
@@ -955,8 +932,7 @@
       "lng": -82.97118301844668,
       "owner": "VERDELL MCCALL",
       "openingBid": 8600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901468",
@@ -994,8 +970,7 @@
       "lng": -83.25884422602654,
       "owner": "JOYCE ROBISON",
       "openingBid": 5900,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900554",
@@ -1017,7 +992,7 @@
       "open": 15600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 21,
+      "views": 22,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -1033,8 +1008,7 @@
       "lng": -83.17616372601812,
       "owner": "PAUL JONES",
       "openingBid": 15600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900070",
@@ -1056,7 +1030,7 @@
       "open": 6600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 24,
+      "views": 27,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -1072,8 +1046,7 @@
       "lng": -83.09107598693838,
       "owner": "RAYMOND CLEVELAND",
       "openingBid": 6600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900927",
@@ -1111,8 +1084,7 @@
       "lng": -83.1287660925496,
       "owner": "MONICA DIXON",
       "openingBid": 12500,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900922",
@@ -1150,8 +1122,7 @@
       "lng": -83.11377459089873,
       "owner": "PAIGE CAREY",
       "openingBid": 9500,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900744",
@@ -1173,7 +1144,7 @@
       "open": 20600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 22,
+      "views": 23,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -1189,8 +1160,7 @@
       "lng": -83.25782798609809,
       "owner": "HARRY TAYLOR",
       "openingBid": 20600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     }
   ],
   "pulledOff": [],
@@ -1208,7 +1178,7 @@
       "open": 19400,
       "currentBid": 29700,
       "bidCount": 13,
-      "views": 824,
+      "views": 860,
       "saleStatus": "ACTIVE",
       "why": "Your house — 13884 Gallagher. Already in play.",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900021&batchId=1",
@@ -1230,8 +1200,7 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": true,
-      "refreshError": "fetch failed"
+      "hot": true
     },
     {
       "auctionId": "260901622",
@@ -1246,7 +1215,7 @@
       "open": 5600,
       "currentBid": 5600,
       "bidCount": 1,
-      "views": 90,
+      "views": 96,
       "saleStatus": "ACTIVE",
       "why": "Next door Gallagher commercial lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901622&batchId=32",
@@ -1268,8 +1237,7 @@
       "window": "Thu leftover lots",
       "windowId": "thu",
       "windowOrder": 6,
-      "hot": false,
-      "refreshError": "fetch failed"
+      "hot": false
     },
     {
       "auctionId": "260901623",
@@ -1284,7 +1252,7 @@
       "open": 2000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 66,
+      "views": 69,
       "saleStatus": "ACTIVE",
       "why": "Same street Gallagher vacant lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901623&batchId=32",
@@ -1306,8 +1274,7 @@
       "window": "Thu leftover lots",
       "windowId": "thu",
       "windowOrder": 6,
-      "hot": false,
-      "refreshError": "fetch failed"
+      "hot": false
     },
     {
       "auctionId": "260900003",
@@ -1322,7 +1289,7 @@
       "open": 10900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 844,
+      "views": 885,
       "saleStatus": "ACTIVE",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
@@ -1344,8 +1311,7 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": false,
-      "refreshError": "fetch failed"
+      "hot": false
     },
     {
       "auctionId": "260900002",
@@ -1360,7 +1326,7 @@
       "open": 5900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 1296,
+      "views": 1343,
       "saleStatus": "ACTIVE",
       "why": "106 W Greendale",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900002&batchId=1",
@@ -1382,8 +1348,7 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": false,
-      "refreshError": "fetch failed"
+      "hot": false
     }
   ]
 }
