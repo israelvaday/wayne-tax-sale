@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-14T00:18:06.162Z",
+  "pulled": "2026-09-14T00:33:06.033Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -1144,7 +1144,7 @@
       "open": 20600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 21,
+      "views": 22,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -1289,7 +1289,7 @@
       "open": 10900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 831,
+      "views": 832,
       "saleStatus": "ACTIVE",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
