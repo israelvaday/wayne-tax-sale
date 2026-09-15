@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-15T03:33:06.355Z",
+  "pulled": "2026-09-15T03:48:06.231Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -42,7 +42,7 @@
       "open": 5300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 75,
+      "views": 76,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -346,7 +346,7 @@
       "open": 8000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 43,
+      "views": 44,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -382,9 +382,9 @@
       "landUse": "Duplex (2 units, any combination)",
       "sev": 50600,
       "open": 5200,
-      "currentBid": 5500,
-      "bidCount": 4,
-      "views": 63,
+      "currentBid": 5600,
+      "bidCount": 5,
+      "views": 64,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -400,7 +400,7 @@
       "lng": -83.02048972575355,
       "owner": "LATONYA WATKINS",
       "openingBid": 5200,
-      "lastBidAt": "2026-09-14T13:24:40"
+      "lastBidAt": "2026-09-14T23:46:56"
     },
     {
       "auctionId": "260901085",
@@ -1289,7 +1289,7 @@
       "open": 10900,
       "currentBid": 10900,
       "bidCount": 1,
-      "views": 915,
+      "views": 916,
       "saleStatus": "ACTIVE",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
