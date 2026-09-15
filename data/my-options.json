@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-15T13:56:20.533Z",
+  "pulled": "2026-09-15T14:03:04.286Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
