@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-16T22:49:08.854Z",
+  "pulled": "2026-09-16T23:03:07.701Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -16,12 +16,13 @@
   "note": "$2,500 keeps you high bidder on one house at a time. Last 5 minutes can +5 soft-close. Bids cannot be retracted. Pay within 72 hours of the sale close.",
   "counts": {
     "checked": 35,
-    "active": 26,
-    "removed": 4,
-    "picked": 26,
+    "active": 0,
+    "removed": 30,
+    "picked": 0,
     "watching": 5
   },
-  "picks": [
+  "picks": [],
+  "pulledOff": [
     {
       "auctionId": "260900840",
       "address": "258 W NEVADA",
@@ -42,8 +43,8 @@
       "open": 6500,
       "currentBid": null,
       "bidCount": 0,
-      "views": 80,
-      "saleStatus": "ACTIVE",
+      "views": 85,
+      "saleStatus": "CLOSED",
       "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1.5,
@@ -58,8 +59,7 @@
       "lng": -83.10700755358744,
       "owner": "WILLIE MILLS",
       "openingBid": 6500,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900873",
@@ -69,7 +69,7 @@
       "parcelId": "08009594.",
       "batchId": "18",
       "batchEnds": "2026-09-16T13:30:00",
-      "extendedEnd": "2026-09-16T13:51:07",
+      "extendedEnd": "2026-09-16T14:42:48",
       "window": "Wed 12:45–2:00",
       "windowId": "lunch",
       "windowOrder": 3,
@@ -79,26 +79,25 @@
       "landUse": "Single Family Residential",
       "sev": 29000,
       "open": 4800,
-      "currentBid": 6000,
-      "bidCount": 13,
-      "views": 73,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "currentBid": 17000,
+      "bidCount": 70,
+      "views": 163,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 1292,
       "yearBuilt": 1922,
       "why": "Log Cabin — SEV vs cheap open",
       "pinned": true,
-      "hot": false,
+      "hot": true,
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900873&batchId=18",
       "plottiaUrl": "https://plottia.com/property/mi/highland-park/16511-log-cabin-st-48203-d2b500c1-4de5-4a03-8b59-1bfaae2de3ca",
       "lat": 42.41287778716065,
       "lng": -83.12204409905785,
       "owner": "PLAN O LLC",
       "openingBid": 4800,
-      "lastBidAt": "2026-09-16T13:46:07",
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T14:37:48"
     },
     {
       "auctionId": "260901045",
@@ -120,9 +119,9 @@
       "open": 5100,
       "currentBid": null,
       "bidCount": 0,
-      "views": 88,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 93,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 2.5,
       "sqft": 2702,
@@ -136,8 +135,7 @@
       "lng": -83.14427648236776,
       "owner": "JIMMIE JONES",
       "openingBid": 5100,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901071",
@@ -147,7 +145,7 @@
       "parcelId": "16041116.",
       "batchId": "21",
       "batchEnds": "2026-09-16T14:15:00",
-      "extendedEnd": null,
+      "extendedEnd": "2026-09-16T14:29:57",
       "window": "Wed 2:15–3:30",
       "windowId": "afternoon",
       "windowOrder": 4,
@@ -157,26 +155,25 @@
       "landUse": "Single Family Residential",
       "sev": 35700,
       "open": 7800,
-      "currentBid": null,
-      "bidCount": 0,
-      "views": 47,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "currentBid": 16700,
+      "bidCount": 34,
+      "views": 68,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 1080,
       "yearBuilt": 1927,
       "why": "Griggs — high SEV, afternoon slot",
       "pinned": true,
-      "hot": false,
+      "hot": true,
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901071&batchId=21",
       "plottiaUrl": "https://plottia.com/property/mi/detroit/15410-griggs-st-48238-f448b7b3-541b-4f6d-9c1f-b40580b4c3e4",
       "lat": 42.40444602303839,
       "lng": -83.16267575627138,
       "owner": "RAKEYA YOUNG",
       "openingBid": 7800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T14:24:57"
     },
     {
       "auctionId": "260901103",
@@ -186,7 +183,7 @@
       "parcelId": "17014850.",
       "batchId": "22",
       "batchEnds": "2026-09-16T14:30:00",
-      "extendedEnd": null,
+      "extendedEnd": "2026-09-16T14:35:39",
       "window": "Wed 2:15–3:30",
       "windowId": "afternoon",
       "windowOrder": 4,
@@ -196,11 +193,11 @@
       "landUse": "Single Family Residential",
       "sev": 33900,
       "open": 8000,
-      "currentBid": null,
-      "bidCount": 0,
-      "views": 70,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "currentBid": 12000,
+      "bidCount": 23,
+      "views": 87,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 1242,
@@ -214,8 +211,7 @@
       "lng": -83.00689824529198,
       "owner": "NADINE PLACIDE",
       "openingBid": 8000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T14:30:39"
     },
     {
       "auctionId": "260901101",
@@ -235,11 +231,11 @@
       "landUse": "Duplex (2 units, any combination)",
       "sev": 50600,
       "open": 5200,
-      "currentBid": 10000,
-      "bidCount": 51,
-      "views": 111,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "currentBid": 17000,
+      "bidCount": 61,
+      "views": 123,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 2,
       "sqft": 2212,
@@ -253,8 +249,7 @@
       "lng": -83.02048972575355,
       "owner": "LATONYA WATKINS",
       "openingBid": 5200,
-      "lastBidAt": "2026-09-16T13:39:16",
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T14:06:31"
     },
     {
       "auctionId": "260901085",
@@ -264,7 +259,7 @@
       "parcelId": "17000868.",
       "batchId": "22",
       "batchEnds": "2026-09-16T14:30:00",
-      "extendedEnd": null,
+      "extendedEnd": "2026-09-16T14:40:14",
       "window": "Wed 2:15–3:30",
       "windowId": "afternoon",
       "windowOrder": 4,
@@ -274,11 +269,11 @@
       "landUse": "Single Family Residential",
       "sev": 26500,
       "open": 3900,
-      "currentBid": 3900,
-      "bidCount": 1,
-      "views": 74,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "currentBid": 7500,
+      "bidCount": 25,
+      "views": 98,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1.5,
       "sqft": 1539,
@@ -292,8 +287,7 @@
       "lng": -83.01628715874139,
       "owner": "SAVANNNAH HANNAH",
       "openingBid": 3900,
-      "lastBidAt": "2026-09-16T11:44:27",
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T14:35:14"
     },
     {
       "auctionId": "260901197",
@@ -303,7 +297,7 @@
       "parcelId": "21019501.",
       "batchId": "24",
       "batchEnds": "2026-09-16T15:00:00",
-      "extendedEnd": null,
+      "extendedEnd": "2026-09-16T15:02:33",
       "window": "Wed 2:15–3:30",
       "windowId": "afternoon",
       "windowOrder": 4,
@@ -313,26 +307,25 @@
       "landUse": "Single Family Residential",
       "sev": 10500,
       "open": 5000,
-      "currentBid": null,
-      "bidCount": 0,
-      "views": 27,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "currentBid": 5000,
+      "bidCount": 1,
+      "views": 31,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 1032,
       "yearBuilt": 1939,
       "why": "Named quiet pack",
       "pinned": true,
-      "hot": false,
+      "hot": true,
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901197&batchId=24",
       "plottiaUrl": "https://plottia.com/property/mi/detroit/13907-eastwood-st-48205-396d2b84-eda5-47f5-b381-c552f860e7cb",
       "lat": 42.433468045209295,
       "lng": -82.98048722557186,
       "owner": "STARMIKQUA DAVIS",
       "openingBid": 5000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T14:57:33"
     },
     {
       "auctionId": "260901206",
@@ -354,9 +347,9 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 20,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 22,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 4,
       "baths": 2,
       "sqft": 1286,
@@ -370,8 +363,7 @@
       "lng": -82.96906099872825,
       "owner": "ANTONIO ANDERSON",
       "openingBid": 5000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901209",
@@ -393,9 +385,9 @@
       "open": 5800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 22,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 29,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 2,
       "baths": 1,
       "sqft": 757,
@@ -409,8 +401,7 @@
       "lng": -82.96654998452647,
       "owner": "TREVONNA HOOPER",
       "openingBid": 5800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901196",
@@ -432,9 +423,9 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 21,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 24,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 808,
@@ -448,8 +439,7 @@
       "lng": -82.96108565494808,
       "owner": "FORTUNE GROUP TRUST",
       "openingBid": 5000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901226",
@@ -472,8 +462,8 @@
       "currentBid": null,
       "bidCount": 0,
       "views": 18,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 4,
       "baths": 2,
       "sqft": 1982,
@@ -487,8 +477,7 @@
       "lng": -82.99261396658086,
       "owner": "TANYA DAVENPORT",
       "openingBid": 7300,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901234",
@@ -510,9 +499,9 @@
       "open": 7300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 32,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 45,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1.5,
       "sqft": 1478,
@@ -526,8 +515,7 @@
       "lng": -82.99834122617158,
       "owner": "CURTIS DUBOSE",
       "openingBid": 7300,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901235",
@@ -549,9 +537,9 @@
       "open": 6800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 19,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 28,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1,
       "sqft": 997,
@@ -565,8 +553,7 @@
       "lng": -83.00039060930642,
       "owner": "KINGMAN HOLDINGS LLC",
       "openingBid": 6800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901388",
@@ -588,9 +575,9 @@
       "open": 12400,
       "currentBid": null,
       "bidCount": 0,
-      "views": 50,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 67,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 3,
       "sqft": 1518,
@@ -604,8 +591,7 @@
       "lng": -83.18759922577472,
       "owner": "DAESHON HARRIS",
       "openingBid": 12400,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901418",
@@ -627,9 +613,9 @@
       "open": 7800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 115,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 133,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 910,
@@ -643,8 +629,7 @@
       "lng": -83.2165924846917,
       "owner": "CHASE JABS",
       "openingBid": 7800,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901403",
@@ -654,7 +639,7 @@
       "parcelId": "22053374.",
       "batchId": "28",
       "batchEnds": "2026-09-16T16:00:00",
-      "extendedEnd": null,
+      "extendedEnd": "2026-09-16T16:32:59",
       "window": "Wed 3:45–4:45",
       "windowId": "late",
       "windowOrder": 5,
@@ -664,11 +649,11 @@
       "landUse": "Single Family Residential",
       "sev": 20100,
       "open": 6600,
-      "currentBid": null,
-      "bidCount": 0,
-      "views": 44,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "currentBid": 8900,
+      "bidCount": 24,
+      "views": 102,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 801,
@@ -682,8 +667,7 @@
       "lng": -83.20007998465445,
       "owner": "DETROIT LAND BANK AUTHORITY",
       "openingBid": 6600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T16:27:59"
     },
     {
       "auctionId": "260901402",
@@ -705,9 +689,9 @@
       "open": 6900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 44,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 57,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 1150,
@@ -721,8 +705,7 @@
       "lng": -83.1994243608467,
       "owner": "GERALD ROBERTS",
       "openingBid": 6900,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900362",
@@ -744,9 +727,9 @@
       "open": 9000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 9,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 12,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1,
       "sqft": 1240,
@@ -760,8 +743,7 @@
       "lng": -82.97743175194579,
       "owner": "BERTHA GRAY",
       "openingBid": 9000,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900407",
@@ -783,9 +765,9 @@
       "open": 8600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 31,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 37,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 4,
       "baths": 2,
       "sqft": 1340,
@@ -799,8 +781,7 @@
       "lng": -82.97118301844668,
       "owner": "VERDELL MCCALL",
       "openingBid": 8600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260901468",
@@ -822,9 +803,9 @@
       "open": 5900,
       "currentBid": null,
       "bidCount": 0,
-      "views": 11,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 12,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1.5,
       "sqft": 936,
@@ -838,8 +819,7 @@
       "lng": -83.25884422602654,
       "owner": "JOYCE ROBISON",
       "openingBid": 5900,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900554",
@@ -861,9 +841,9 @@
       "open": 15600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 45,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 80,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 1426,
@@ -877,8 +857,7 @@
       "lng": -83.17616372601812,
       "owner": "PAUL JONES",
       "openingBid": 15600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900070",
@@ -900,9 +879,9 @@
       "open": 6600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 29,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 31,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1.5,
       "sqft": 1056,
@@ -916,8 +895,7 @@
       "lng": -83.09107598693838,
       "owner": "RAYMOND CLEVELAND",
       "openingBid": 6600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900927",
@@ -939,9 +917,9 @@
       "open": 12500,
       "currentBid": null,
       "bidCount": 0,
-      "views": 18,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 19,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 0,
       "baths": 1.5,
       "sqft": 1392,
@@ -955,8 +933,7 @@
       "lng": -83.1287660925496,
       "owner": "MONICA DIXON",
       "openingBid": 12500,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900922",
@@ -978,9 +955,9 @@
       "open": 9500,
       "currentBid": null,
       "bidCount": 0,
-      "views": 20,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 24,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 1450,
@@ -994,8 +971,7 @@
       "lng": -83.11377459089873,
       "owner": "PAIGE CAREY",
       "openingBid": 9500,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900744",
@@ -1017,9 +993,9 @@
       "open": 20600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 25,
-      "saleStatus": "ACTIVE",
-      "itemStatus": "IN PROGRESS",
+      "views": 27,
+      "saleStatus": "CLOSED",
+      "itemStatus": "CLOSED",
       "beds": 3,
       "baths": 1,
       "sqft": 576,
@@ -1033,11 +1009,8 @@
       "lng": -83.25782798609809,
       "owner": "HARRY TAYLOR",
       "openingBid": 20600,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
-    }
-  ],
-  "pulledOff": [
+      "lastBidAt": null
+    },
     {
       "auctionId": "260900304",
       "address": "19324 ALBION",
@@ -1058,7 +1031,7 @@
       "open": 5300,
       "currentBid": 13500,
       "bidCount": 10,
-      "views": 126,
+      "views": 128,
       "saleStatus": "CLOSED",
       "itemStatus": "CLOSED",
       "beds": 3,
@@ -1074,8 +1047,7 @@
       "lng": -83.00556272636736,
       "owner": "GERRY PRINGLE",
       "openingBid": 5300,
-      "lastBidAt": "2026-09-16T10:30:29",
-      "refreshError": "fetch failed"
+      "lastBidAt": "2026-09-16T10:30:29"
     },
     {
       "auctionId": "260900367",
@@ -1097,7 +1069,7 @@
       "open": 11400,
       "currentBid": null,
       "bidCount": 0,
-      "views": 46,
+      "views": 51,
       "saleStatus": "CLOSED",
       "itemStatus": "CLOSED",
       "beds": 0,
@@ -1113,8 +1085,7 @@
       "lng": -82.97002975983617,
       "owner": "DETROIT IMPROVEMENT",
       "openingBid": 11400,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900449",
@@ -1136,7 +1107,7 @@
       "open": 5700,
       "currentBid": null,
       "bidCount": 0,
-      "views": 51,
+      "views": 53,
       "saleStatus": "CLOSED",
       "itemStatus": "CLOSED",
       "beds": 3,
@@ -1152,8 +1123,7 @@
       "lng": -83.0015442109205,
       "owner": "HENLEY",
       "openingBid": 5700,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     },
     {
       "auctionId": "260900448",
@@ -1175,7 +1145,7 @@
       "open": 15700,
       "currentBid": null,
       "bidCount": 0,
-      "views": 60,
+      "views": 63,
       "saleStatus": "CLOSED",
       "itemStatus": "CLOSED",
       "beds": 3,
@@ -1191,8 +1161,7 @@
       "lng": -83.00076412920738,
       "owner": "MICHELLE JORDAN",
       "openingBid": 15700,
-      "lastBidAt": null,
-      "refreshError": "fetch failed"
+      "lastBidAt": null
     }
   ],
   "watching": [
@@ -1209,7 +1178,7 @@
       "open": 19400,
       "currentBid": 36700,
       "bidCount": 20,
-      "views": 1085,
+      "views": 1108,
       "saleStatus": "CLOSED",
       "why": "Your house — 13884 Gallagher. Already in play.",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900021&batchId=1",
@@ -1231,8 +1200,7 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": true,
-      "refreshError": "fetch failed"
+      "hot": true
     },
     {
       "auctionId": "260901622",
@@ -1247,7 +1215,7 @@
       "open": 5600,
       "currentBid": 5800,
       "bidCount": 3,
-      "views": 145,
+      "views": 159,
       "saleStatus": "ACTIVE",
       "why": "Next door Gallagher commercial lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901622&batchId=32",
@@ -1269,8 +1237,7 @@
       "window": "Thu leftover lots",
       "windowId": "thu",
       "windowOrder": 6,
-      "hot": false,
-      "refreshError": "fetch failed"
+      "hot": false
     },
     {
       "auctionId": "260901623",
@@ -1285,7 +1252,7 @@
       "open": 2000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 97,
+      "views": 102,
       "saleStatus": "ACTIVE",
       "why": "Same street Gallagher vacant lot",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260901623&batchId=32",
@@ -1307,8 +1274,7 @@
       "window": "Thu leftover lots",
       "windowId": "thu",
       "windowOrder": 6,
-      "hot": false,
-      "refreshError": "fetch failed"
+      "hot": false
     },
     {
       "auctionId": "260900003",
@@ -1323,7 +1289,7 @@
       "open": 10900,
       "currentBid": 43000,
       "bidCount": 32,
-      "views": 1206,
+      "views": 1227,
       "saleStatus": "CLOSED",
       "why": "79 W Grixdale — you were watching this",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900003&batchId=1",
@@ -1345,8 +1311,7 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": true,
-      "refreshError": "fetch failed"
+      "hot": true
     },
     {
       "auctionId": "260900002",
@@ -1361,7 +1326,7 @@
       "open": 5900,
       "currentBid": 15000,
       "bidCount": 40,
-      "views": 1685,
+      "views": 1716,
       "saleStatus": "CLOSED",
       "why": "106 W Greendale",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900002&batchId=1",
@@ -1383,8 +1348,7 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": true,
-      "refreshError": "fetch failed"
+      "hot": true
     }
   ]
 }
