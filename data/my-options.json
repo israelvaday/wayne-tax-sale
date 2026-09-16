@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-16T11:18:10.056Z",
+  "pulled": "2026-09-16T11:33:13.839Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -382,9 +382,9 @@
       "landUse": "Duplex (2 units, any combination)",
       "sev": 50600,
       "open": 5200,
-      "currentBid": 6200,
-      "bidCount": 11,
-      "views": 88,
+      "currentBid": 6300,
+      "bidCount": 12,
+      "views": 89,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -400,7 +400,7 @@
       "lng": -83.02048972575355,
       "owner": "LATONYA WATKINS",
       "openingBid": 5200,
-      "lastBidAt": "2026-09-16T06:50:52"
+      "lastBidAt": "2026-09-16T07:26:32"
     },
     {
       "auctionId": "260901085",
@@ -460,7 +460,7 @@
       "open": 5000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 23,
+      "views": 24,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -764,7 +764,7 @@
       "open": 7800,
       "currentBid": null,
       "bidCount": 0,
-      "views": 94,
+      "views": 95,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -1326,7 +1326,7 @@
       "open": 5900,
       "currentBid": 13000,
       "bidCount": 38,
-      "views": 1573,
+      "views": 1574,
       "saleStatus": "ACTIVE",
       "why": "106 W Greendale",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900002&batchId=1",
