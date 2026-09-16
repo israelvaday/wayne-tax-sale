@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-16T05:33:06.790Z",
+  "pulled": "2026-09-16T05:48:06.338Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -992,7 +992,7 @@
       "open": 15600,
       "currentBid": null,
       "bidCount": 0,
-      "views": 34,
+      "views": 35,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
