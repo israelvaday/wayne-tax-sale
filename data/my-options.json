@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-16T17:48:06.480Z",
+  "pulled": "2026-09-16T22:49:08.854Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -58,7 +58,8 @@
       "lng": -83.10700755358744,
       "owner": "WILLIE MILLS",
       "openingBid": 6500,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900873",
@@ -96,7 +97,8 @@
       "lng": -83.12204409905785,
       "owner": "PLAN O LLC",
       "openingBid": 4800,
-      "lastBidAt": "2026-09-16T13:46:07"
+      "lastBidAt": "2026-09-16T13:46:07",
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901045",
@@ -134,7 +136,8 @@
       "lng": -83.14427648236776,
       "owner": "JIMMIE JONES",
       "openingBid": 5100,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901071",
@@ -172,7 +175,8 @@
       "lng": -83.16267575627138,
       "owner": "RAKEYA YOUNG",
       "openingBid": 7800,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901103",
@@ -210,7 +214,8 @@
       "lng": -83.00689824529198,
       "owner": "NADINE PLACIDE",
       "openingBid": 8000,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901101",
@@ -248,7 +253,8 @@
       "lng": -83.02048972575355,
       "owner": "LATONYA WATKINS",
       "openingBid": 5200,
-      "lastBidAt": "2026-09-16T13:39:16"
+      "lastBidAt": "2026-09-16T13:39:16",
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901085",
@@ -286,7 +292,8 @@
       "lng": -83.01628715874139,
       "owner": "SAVANNNAH HANNAH",
       "openingBid": 3900,
-      "lastBidAt": "2026-09-16T11:44:27"
+      "lastBidAt": "2026-09-16T11:44:27",
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901197",
@@ -324,7 +331,8 @@
       "lng": -82.98048722557186,
       "owner": "STARMIKQUA DAVIS",
       "openingBid": 5000,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901206",
@@ -362,7 +370,8 @@
       "lng": -82.96906099872825,
       "owner": "ANTONIO ANDERSON",
       "openingBid": 5000,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901209",
@@ -400,7 +409,8 @@
       "lng": -82.96654998452647,
       "owner": "TREVONNA HOOPER",
       "openingBid": 5800,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901196",
@@ -438,7 +448,8 @@
       "lng": -82.96108565494808,
       "owner": "FORTUNE GROUP TRUST",
       "openingBid": 5000,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901226",
@@ -476,7 +487,8 @@
       "lng": -82.99261396658086,
       "owner": "TANYA DAVENPORT",
       "openingBid": 7300,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901234",
@@ -514,7 +526,8 @@
       "lng": -82.99834122617158,
       "owner": "CURTIS DUBOSE",
       "openingBid": 7300,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901235",
@@ -552,7 +565,8 @@
       "lng": -83.00039060930642,
       "owner": "KINGMAN HOLDINGS LLC",
       "openingBid": 6800,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901388",
@@ -590,7 +604,8 @@
       "lng": -83.18759922577472,
       "owner": "DAESHON HARRIS",
       "openingBid": 12400,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901418",
@@ -628,7 +643,8 @@
       "lng": -83.2165924846917,
       "owner": "CHASE JABS",
       "openingBid": 7800,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901403",
@@ -666,7 +682,8 @@
       "lng": -83.20007998465445,
       "owner": "DETROIT LAND BANK AUTHORITY",
       "openingBid": 6600,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901402",
@@ -704,7 +721,8 @@
       "lng": -83.1994243608467,
       "owner": "GERALD ROBERTS",
       "openingBid": 6900,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900362",
@@ -742,7 +760,8 @@
       "lng": -82.97743175194579,
       "owner": "BERTHA GRAY",
       "openingBid": 9000,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900407",
@@ -780,7 +799,8 @@
       "lng": -82.97118301844668,
       "owner": "VERDELL MCCALL",
       "openingBid": 8600,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901468",
@@ -818,7 +838,8 @@
       "lng": -83.25884422602654,
       "owner": "JOYCE ROBISON",
       "openingBid": 5900,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900554",
@@ -856,7 +877,8 @@
       "lng": -83.17616372601812,
       "owner": "PAUL JONES",
       "openingBid": 15600,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900070",
@@ -894,7 +916,8 @@
       "lng": -83.09107598693838,
       "owner": "RAYMOND CLEVELAND",
       "openingBid": 6600,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900927",
@@ -932,7 +955,8 @@
       "lng": -83.1287660925496,
       "owner": "MONICA DIXON",
       "openingBid": 12500,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900922",
@@ -970,7 +994,8 @@
       "lng": -83.11377459089873,
       "owner": "PAIGE CAREY",
       "openingBid": 9500,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900744",
@@ -1008,7 +1033,8 @@
       "lng": -83.25782798609809,
       "owner": "HARRY TAYLOR",
       "openingBid": 20600,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     }
   ],
   "pulledOff": [
@@ -1048,7 +1074,8 @@
       "lng": -83.00556272636736,
       "owner": "GERRY PRINGLE",
       "openingBid": 5300,
-      "lastBidAt": "2026-09-16T10:30:29"
+      "lastBidAt": "2026-09-16T10:30:29",
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900367",
@@ -1086,7 +1113,8 @@
       "lng": -82.97002975983617,
       "owner": "DETROIT IMPROVEMENT",
       "openingBid": 11400,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900449",
@@ -1124,7 +1152,8 @@
       "lng": -83.0015442109205,
       "owner": "HENLEY",
       "openingBid": 5700,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900448",
@@ -1162,7 +1191,8 @@
       "lng": -83.00076412920738,
       "owner": "MICHELLE JORDAN",
       "openingBid": 15700,
-      "lastBidAt": null
+      "lastBidAt": null,
+      "refreshError": "fetch failed"
     }
   ],
   "watching": [
@@ -1201,7 +1231,8 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": true
+      "hot": true,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901622",
@@ -1238,7 +1269,8 @@
       "window": "Thu leftover lots",
       "windowId": "thu",
       "windowOrder": 6,
-      "hot": false
+      "hot": false,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260901623",
@@ -1275,7 +1307,8 @@
       "window": "Thu leftover lots",
       "windowId": "thu",
       "windowOrder": 6,
-      "hot": false
+      "hot": false,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900003",
@@ -1312,7 +1345,8 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": true
+      "hot": true,
+      "refreshError": "fetch failed"
     },
     {
       "auctionId": "260900002",
@@ -1349,7 +1383,8 @@
       "window": "Wed 9:15–11:00",
       "windowId": "early",
       "windowOrder": 1,
-      "hot": true
+      "hot": true,
+      "refreshError": "fetch failed"
     }
   ]
 }
