@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-16T08:03:11.053Z",
+  "pulled": "2026-09-16T08:18:10.556Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -650,7 +650,7 @@
       "open": 7300,
       "currentBid": null,
       "bidCount": 0,
-      "views": 26,
+      "views": 27,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 0,
@@ -1326,7 +1326,7 @@
       "open": 5900,
       "currentBid": 13000,
       "bidCount": 38,
-      "views": 1557,
+      "views": 1558,
       "saleStatus": "ACTIVE",
       "why": "106 W Greendale",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900002&batchId=1",
