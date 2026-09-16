@@ -1,5 +1,5 @@
 {
-  "pulled": "2026-09-16T06:18:05.932Z",
+  "pulled": "2026-09-16T06:33:05.950Z",
   "source": "Wayne County Treasurer public GetAuctionItemDetails",
   "rules": [
     "STATUS === ACTIVE (REMOVED is dead — ignore ITEM_STATUS)",
@@ -346,7 +346,7 @@
       "open": 8000,
       "currentBid": null,
       "bidCount": 0,
-      "views": 56,
+      "views": 57,
       "saleStatus": "ACTIVE",
       "itemStatus": "IN PROGRESS",
       "beds": 3,
@@ -1178,7 +1178,7 @@
       "open": 19400,
       "currentBid": 31700,
       "bidCount": 15,
-      "views": 972,
+      "views": 973,
       "saleStatus": "ACTIVE",
       "why": "Your house — 13884 Gallagher. Already in play.",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900021&batchId=1",
@@ -1326,7 +1326,7 @@
       "open": 5900,
       "currentBid": 13000,
       "bidCount": 38,
-      "views": 1548,
+      "views": 1549,
       "saleStatus": "ACTIVE",
       "why": "106 W Greendale",
       "treasurerUrl": "https://waynecountytreasurermi.com/property-details.html?ai_id=260900002&batchId=1",
