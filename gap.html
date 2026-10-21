@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Low bid, high county · Wayne October 2026</title>
+<title>Best open deals · Wayne October 2026</title>
 <style>
   body { margin: 0; background: #09090b; color: #f4f4f5; font: 14px/1.45 -apple-system, "Segoe UI", sans-serif; }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+  .wrap { max-width: 1150px; margin: 0 auto; padding: 24px 16px 64px; }
   h1 { font-size: 22px; margin: 0 0 4px; }
-  p.meta { color: #a1a1aa; margin: 0 0 20px; font-size: 13px; }
+  p.meta { color: #a1a1aa; margin: 0 0 8px; font-size: 13px; }
+  .clock { color: #fbbf24; font-size: 13px; margin: 0 0 16px; }
+  .toggle { margin: 0 0 14px; font-size: 13px; color: #a1a1aa; }
   table { width: 100%; border-collapse: collapse; }
   th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: #a1a1aa; padding: 8px 10px; border-bottom: 1px solid #27272a; }
   td { padding: 10px; border-bottom: 1px solid #1c1c1f; vertical-align: top; }
@@ -17,8 +19,12 @@
   .sub { display: block; font-size: 11px; color: #71717a; }
   a { color: #fbbf24; text-decoration: none; }
   a:hover { text-decoration: underline; }
-  tr.land td:first-child { color: #93c5fd; }
-  tr.house td:first-child { color: #4ade80; }
+  tr.land td.ratio { color: #93c5fd; }
+  tr.house td.ratio { color: #4ade80; }
+  tr.closed { opacity: .25; }
+  tr.closed .end { color: #f87171; }
+  td.end { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  td.end.soon { color: #f87171; font-weight: 600; }
   .links { white-space: nowrap; }
   .back { display: inline-block; margin-bottom: 14px; color: #a1a1aa; }
 </style>
@@ -26,319 +32,1127 @@
 <body>
 <div class="wrap">
   <a class="back" href="./">&larr; Full catalog</a>
-  <h1>Low bid, high county value — still open</h1>
-  <p class="meta">Wayne County October 2026 auction. Live bids as of Oct 21, 12:53 PM ET. Gap is county value (SEV &times; 2) over the current ask. Green rows have a structure per the county; blue rows are vacant land. Verify on Street View before bidding.</p>
+  <h1>Best open deals — ranked by floor over ask</h1>
+  <p class="meta">Wayne County October 2026. Floor = lowest of county value (SEV&times;2), Plottia, PropStream. Bids refreshed Oct 21, 1:58 PM ET — current bids may be higher, click Bid to verify. Green = structure on parcel per county; blue = vacant land. Rows gray out automatically when their batch closes.</p>
+  <p class="clock" id="clock"></p>
+  <label class="toggle"><input type="checkbox" id="hideClosed" checked> Hide closed batches</label>
   <table>
-    <thead><tr><th>Gap</th><th>Bid now</th><th>County value</th><th>Plottia</th><th>Property</th><th>Closes</th><th>Links</th></tr></thead>
+    <thead><tr><th>Gap</th><th>Bid now</th><th>Floor</th><th>County</th><th>Plottia</th><th>Property</th><th>Closes</th><th>Links</th></tr></thead>
     <tbody>
-<tr class="land">
-  <td class="num">950x</td>
-  <td class="num">$1,400<span class="sub">6 bids</span></td>
-  <td class="num">$1,330,400<span class="sub">SEV $665,200</span></td>
-  <td class="num">—</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000665&batchId=21" target="_blank" rel="noreferrer">13505 LASALLE</a><span class="sub">DETROIT · vacant land · Commercial (General)</span></td>
-  <td>Oct 21, 2:15 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000665&batchId=21" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/13505-la-salle-blvd-48238-7aca6ccc-6a0d-4e6e-b10f-ff1c22d825e4" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.39423754474145,-83.11960772581529" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="land">
-  <td class="num">432x</td>
-  <td class="num">$1,000<span class="sub">2 bids</span></td>
-  <td class="num">$431,600<span class="sub">SEV $215,800</span></td>
-  <td class="num">—</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000803&batchId=26" target="_blank" rel="noreferrer">7139 CHICAGO DETROIT</a><span class="sub">DETROIT · vacant land · Exempt (full or partial)</span></td>
-  <td>Oct 21, 3:30 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000803&batchId=26" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/7139-w-chicago-48204-52a98b86-caec-424c-8a51-e7512a408433" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.366531,-83.141373" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="house">
-  <td class="num">409x</td>
+<tr class="house" data-end="2026-10-21T15:45:00">
+  <td class="num ratio">409x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$368,200<span class="sub">SEV $184,100</span></td>
-  <td class="num">—</td>
+  <td class="num">$368,200<span class="sub">floor</span></td>
+  <td class="num">$368,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000830&batchId=27" target="_blank" rel="noreferrer">11700 LIVERNOIS DETROIT</a><span class="sub">DETROIT · structure not occupied · Bar, Tavern</span></td>
-  <td>Oct 21, 3:45 PM</td>
+  <td class="end" data-end="2026-10-21T15:45:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000830&batchId=27" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/11700-livernois-ave-48204-b332066a-301e-4a89-b7b6-668fbe2dcd93" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37453504474302,-83.13868272531414" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="house">
-  <td class="num">404x</td>
+<tr class="house" data-end="2026-10-21T14:15:00">
+  <td class="num ratio">404x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$363,200<span class="sub">SEV $181,600</span></td>
-  <td class="num">—</td>
+  <td class="num">$363,200<span class="sub">floor</span></td>
+  <td class="num">$363,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000666&batchId=21" target="_blank" rel="noreferrer">3101 MCDOUGALL DETROIT</a><span class="sub">DETROIT · structure not occupied · Nightclub (Cocktail Lounge)</span></td>
-  <td>Oct 21, 2:15 PM</td>
+  <td class="end" data-end="2026-10-21T14:15:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000666&batchId=21" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/3101-mcdougall-st-48207-126d485b-0201-4d36-bbd3-dc1826e7f637" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.35539238012324,-83.02823900157985" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">266x</td>
-  <td class="num">$1,100<span class="sub">3 bids</span></td>
-  <td class="num">$292,400<span class="sub">SEV $146,200</span></td>
-  <td class="num">$257,000</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000587&batchId=18" target="_blank" rel="noreferrer">526 HARMON</a><span class="sub">DETROIT · vacant land · Duplex (2 units, any combination)</span></td>
-  <td>Oct 21, 1:30 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000587&batchId=18" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/526-harmon-st-48202-a87bdc12-83ac-4a4a-9a34-692e8886ff96" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.39249054479466,-83.08006922580519" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="land">
-  <td class="num">217x</td>
+<tr class="land" data-end="2026-10-22T09:15:00">
+  <td class="num ratio">217x</td>
   <td class="num">$900<span class="sub">1 bid</span></td>
-  <td class="num">$195,000<span class="sub">SEV $97,500</span></td>
-  <td class="num">—</td>
+  <td class="num">$195,000<span class="sub">floor</span></td>
+  <td class="num">$195,000<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000974&batchId=33" target="_blank" rel="noreferrer">12801 MACK</a><span class="sub">DETROIT · vacant land · Commercial-Vacant Land</span></td>
-  <td>Oct 22, 9:15 AM</td>
+  <td class="end" data-end="2026-10-22T09:15:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000974&batchId=33" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/12801-mack-ave-48215-74017ec9-410b-47c0-987f-48cbccdaa404" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.384982957661684,-82.96413736767224" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">163x</td>
+<tr class="land" data-end="2026-10-21T14:15:00">
+  <td class="num ratio">182x</td>
+  <td class="num">$7,300<span class="sub">31 bids</span></td>
+  <td class="num">$1,330,400<span class="sub">floor</span></td>
+  <td class="num">$1,330,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000665&batchId=21" target="_blank" rel="noreferrer">13505 LASALLE</a><span class="sub">DETROIT · vacant land · Commercial (General)</span></td>
+  <td class="end" data-end="2026-10-21T14:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000665&batchId=21" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/13505-la-salle-blvd-48238-7aca6ccc-6a0d-4e6e-b10f-ff1c22d825e4" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.39423754474145,-83.11960772581529" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">163x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$147,000<span class="sub">SEV $73,500</span></td>
-  <td class="num">$185,000</td>
+  <td class="num">$147,000<span class="sub">floor</span></td>
+  <td class="num">$147,000<span class="sub">county</span></td>
+  <td class="num">$185,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001353&batchId=48" target="_blank" rel="noreferrer">109 E BUENA VISTA</a><span class="sub">HIGHLAND PARK · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 1:00 PM</td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001353&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/109-e-buena-vista-st-48203-b0715889-2f5e-45d2-96fa-5b1318157002" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.40262114801859,-83.09025420569738" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">127x</td>
-  <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$114,600<span class="sub">SEV $57,300</span></td>
-  <td class="num">$112,000</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001090&batchId=38" target="_blank" rel="noreferrer">638 MANISTIQUE</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 10:30 AM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001090&batchId=38" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/638-manistique-st-48215-be8a5ad0-e61d-453e-b37f-4ec579e9ffe0" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37033515861592,-82.93832956699279" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="land">
-  <td class="num">126x</td>
+<tr class="land" data-end="2026-10-21T14:30:00">
+  <td class="num ratio">126x</td>
   <td class="num">$1,000<span class="sub">2 bids</span></td>
-  <td class="num">$126,000<span class="sub">SEV $63,000</span></td>
-  <td class="num">—</td>
+  <td class="num">$126,000<span class="sub">floor</span></td>
+  <td class="num">$126,000<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000707&batchId=22" target="_blank" rel="noreferrer">5642 E SEVEN MILE</a><span class="sub">DETROIT · vacant land · Bar, Tavern</span></td>
-  <td>Oct 21, 2:30 PM</td>
+  <td class="end" data-end="2026-10-21T14:30:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000707&batchId=22" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/5642-e-7-mile-rd-48234-2f788218-9477-40e0-87ca-b4a6063f1fd5" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.433280045124526,-83.04619472607268" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="house">
-  <td class="num">123x</td>
+<tr class="land" data-end="2026-10-22T10:30:00">
+  <td class="num ratio">124x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$110,600<span class="sub">SEV $55,300</span></td>
-  <td class="num">—</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000513&batchId=16" target="_blank" rel="noreferrer">13130 PLYMOUTH</a><span class="sub">DETROIT · structure not occupied · Retail Stores (Personal Services, Photography, Travel)</span></td>
-  <td>Oct 21, 1:00 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000513&batchId=16" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/13126-plymouth-rd-48227-c5a2eb65-3384-43a9-bd70-79e889372e10" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37335504474984,-83.1736882257479" target="_blank" rel="noreferrer">Street</a></td>
+  <td class="num">$112,000<span class="sub">floor</span></td>
+  <td class="num">$114,600<span class="sub">county</span></td>
+  <td class="num">$112,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001090&batchId=38" target="_blank" rel="noreferrer">638 MANISTIQUE</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T10:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001090&batchId=38" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/638-manistique-st-48215-be8a5ad0-e61d-453e-b37f-4ec579e9ffe0" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37033515861592,-82.93832956699279" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="house">
-  <td class="num">109x</td>
+<tr class="land" data-end="2026-10-21T15:00:00">
+  <td class="num ratio">107x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$98,000<span class="sub">SEV $49,000</span></td>
-  <td class="num">—</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000514&batchId=16" target="_blank" rel="noreferrer">13118 PLYMOUTH</a><span class="sub">DETROIT · structure not occupied · Bar, Tavern</span></td>
-  <td>Oct 21, 1:00 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000514&batchId=16" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/13118-plymouth-rd-48227-dd007dc7-9833-4f8c-b126-80a9311975e3" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37335948315657,-83.17339297163359" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="land">
-  <td class="num">107x</td>
-  <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$96,000<span class="sub">SEV $48,000</span></td>
-  <td class="num">$144,000</td>
+  <td class="num">$96,000<span class="sub">floor</span></td>
+  <td class="num">$96,000<span class="sub">county</span></td>
+  <td class="num">$144,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000747&batchId=24" target="_blank" rel="noreferrer">4310 CORTLAND</a><span class="sub">DETROIT · vacant land · Duplex (2 units, any combination)</span></td>
-  <td>Oct 21, 3:00 PM</td>
+  <td class="end" data-end="2026-10-21T15:00:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000747&batchId=24" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4310-cortland-st-48204-220f665d-abe4-4cf4-8d50-99790e86ff58" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.3813455446455,-83.13325422606106" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">103x</td>
+<tr class="land" data-end="2026-10-22T10:30:00">
+  <td class="num ratio">103x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$92,800<span class="sub">SEV $46,400</span></td>
-  <td class="num">$140,000</td>
+  <td class="num">$92,800<span class="sub">floor</span></td>
+  <td class="num">$92,800<span class="sub">county</span></td>
+  <td class="num">$140,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001105&batchId=38" target="_blank" rel="noreferrer">4302 NOTTINGHAM</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 10:30 AM</td>
+  <td class="end" data-end="2026-10-22T10:30:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001105&batchId=38" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4302-nottingham-rd-48224-7322f084-c5b3-4a9e-8ffe-774078bc0590" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.39440652380741,-82.94533858808636" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">101x</td>
+<tr class="land" data-end="2026-10-21T15:30:00">
+  <td class="num ratio">103x</td>
+  <td class="num">$4,200<span class="sub">14 bids</span></td>
+  <td class="num">$431,600<span class="sub">floor</span></td>
+  <td class="num">$431,600<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000803&batchId=26" target="_blank" rel="noreferrer">7139 CHICAGO DETROIT</a><span class="sub">DETROIT · vacant land · Exempt (full or partial)</span></td>
+  <td class="end" data-end="2026-10-21T15:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000803&batchId=26" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/7139-w-chicago-48204-52a98b86-caec-424c-8a51-e7512a408433" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.366531,-83.141373" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T14:15:00">
+  <td class="num ratio">101x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$91,000<span class="sub">SEV $45,500</span></td>
-  <td class="num">$256,000</td>
+  <td class="num">$91,000<span class="sub">floor</span></td>
+  <td class="num">$91,000<span class="sub">county</span></td>
+  <td class="num">$256,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000658&batchId=21" target="_blank" rel="noreferrer">2690 STURTEVANT</a><span class="sub">DETROIT · vacant land · Multi-Family Dwellings (Generic, 2+)</span></td>
-  <td>Oct 21, 2:15 PM</td>
+  <td class="end" data-end="2026-10-21T14:15:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000658&batchId=21" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/2690-sturtevant-st-48206-18037b17-550c-494e-a08d-dcc119494ac0" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.3874098858422,-83.12019923816042" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">99x</td>
-  <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$89,200<span class="sub">SEV $44,600</span></td>
-  <td class="num">$81,000</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001037&batchId=36" target="_blank" rel="noreferrer">20026 WALTHAM</a><span class="sub">DETROIT · vacant land · Bungalow (Residential)</span></td>
-  <td>Oct 22, 10:00 AM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001037&batchId=36" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/20026-waltham-st-48205-c3c838e2-2b1c-4f51-a54f-2e6334c0a7a9" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.44423404527019,-82.99491772561767" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="land">
-  <td class="num">92x</td>
-  <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$82,400<span class="sub">SEV $41,200</span></td>
-  <td class="num">—</td>
+<tr class="land" data-end="2026-10-22T11:00:00">
+  <td class="num ratio">92x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$82,400<span class="sub">floor</span></td>
+  <td class="num">$82,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001133&batchId=40" target="_blank" rel="noreferrer">20717 FENKELL</a><span class="sub">DETROIT · vacant land · Retail Stores (Personal Services, Photography, Travel)</span></td>
-  <td>Oct 22, 11:00 AM</td>
+  <td class="end" data-end="2026-10-22T11:00:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001133&batchId=40" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/20717-fenkell-st-48223-c2262d76-3af2-4639-a780-7a2818fa9d31" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.40031778744241,-83.24519077049662" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">91x</td>
+<tr class="land" data-end="2026-10-21T16:00:00">
+  <td class="num ratio">91x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$81,800<span class="sub">SEV $40,900</span></td>
-  <td class="num">$131,000</td>
+  <td class="num">$81,800<span class="sub">floor</span></td>
+  <td class="num">$81,800<span class="sub">county</span></td>
+  <td class="num">$131,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000853&batchId=28" target="_blank" rel="noreferrer">16580 LILAC</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 21, 4:00 PM</td>
+  <td class="end" data-end="2026-10-21T16:00:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000853&batchId=28" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/16580-lilac-st-48221-99fd8417-3a75-4cb6-b3a0-ee2ede07215f" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.41344854463672,-83.14671972552789" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">87x</td>
+<tr class="land" data-end="2026-10-22T10:00:00">
+  <td class="num ratio">90x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$78,600<span class="sub">SEV $39,300</span></td>
-  <td class="num">$87,000</td>
+  <td class="num">$81,000<span class="sub">floor</span></td>
+  <td class="num">$89,200<span class="sub">county</span></td>
+  <td class="num">$81,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001037&batchId=36" target="_blank" rel="noreferrer">20026 WALTHAM</a><span class="sub">DETROIT · vacant land · Bungalow (Residential)</span></td>
+  <td class="end" data-end="2026-10-22T10:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001037&batchId=36" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/20026-waltham-st-48205-c3c838e2-2b1c-4f51-a54f-2e6334c0a7a9" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.44423404527019,-82.99491772561767" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T12:30:00">
+  <td class="num ratio">87x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$78,600<span class="sub">floor</span></td>
+  <td class="num">$78,600<span class="sub">county</span></td>
+  <td class="num">$87,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001295&batchId=46" target="_blank" rel="noreferrer">18361 GREYDALE</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 12:30 PM</td>
+  <td class="end" data-end="2026-10-22T12:30:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001295&batchId=46" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/18361-greydale-ave-48219-6c1ddbc5-a43e-458b-9202-f5463a557c6b" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.424065051736704,-83.2571444948183" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">83x</td>
+<tr class="land" data-end="2026-10-22T12:45:00">
+  <td class="num ratio">81x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$75,000<span class="sub">SEV $37,500</span></td>
-  <td class="num">$60,000</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001209&batchId=43" target="_blank" rel="noreferrer">8948 WHITCOMB</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 11:45 AM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001209&batchId=43" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/8948-whitcomb-st-48228-449854b4-2cd5-47ed-b613-1419ca90372a" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.36034402112916,-83.19462596835626" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="land">
-  <td class="num">81x</td>
-  <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$73,200<span class="sub">SEV $36,600</span></td>
-  <td class="num">$107,000</td>
+  <td class="num">$73,200<span class="sub">floor</span></td>
+  <td class="num">$73,200<span class="sub">county</span></td>
+  <td class="num">$107,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001316&batchId=47" target="_blank" rel="noreferrer">18919 DALE</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 12:45 PM</td>
+  <td class="end" data-end="2026-10-22T12:45:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001316&batchId=47" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/18919-dale-st-48219-a3464fcc-a8bd-43ef-9457-5cc178090594" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.42694354407675,-83.27704972600445" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">80x</td>
+<tr class="land" data-end="2026-10-21T15:00:00">
+  <td class="num ratio">80x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$71,800<span class="sub">SEV $35,900</span></td>
-  <td class="num">—</td>
+  <td class="num">$71,800<span class="sub">floor</span></td>
+  <td class="num">$71,800<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000757&batchId=24" target="_blank" rel="noreferrer">4600 LOVETT</a><span class="sub">DETROIT · vacant land · Retail Stores (Personal Services, Photography, Travel)</span></td>
-  <td>Oct 21, 3:00 PM</td>
+  <td class="end" data-end="2026-10-21T15:00:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000757&batchId=24" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4600-lovett-st-48210-6064e232-d974-4414-8f0d-97d3a3777937" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.33940504483868,-83.10830922555148" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="house">
-  <td class="num">74x</td>
+<tr class="land" data-end="2026-10-22T09:45:00">
+  <td class="num ratio">74x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$66,800<span class="sub">SEV $33,400</span></td>
-  <td class="num">$112,000</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000554&batchId=17" target="_blank" rel="noreferrer">19493 VAUGHAN</a><span class="sub">DETROIT · occupied · Single Family Residential</span></td>
-  <td>Oct 21, 1:15 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000554&batchId=17" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/19493-vaughan-st-48219-3fa621f1-ace5-40db-9988-9434eada6053" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.434492103327564,-83.24045581753448" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="land">
-  <td class="num">74x</td>
-  <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$66,600<span class="sub">SEV $33,300</span></td>
-  <td class="num">$73,000</td>
+  <td class="num">$66,600<span class="sub">floor</span></td>
+  <td class="num">$66,600<span class="sub">county</span></td>
+  <td class="num">$73,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001020&batchId=35" target="_blank" rel="noreferrer">15639 FORDHAM</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 9:45 AM</td>
+  <td class="end" data-end="2026-10-22T09:45:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001020&batchId=35" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/15639-fordham-st-48205-8843bf10-e798-4045-b859-42e313d3a319" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.43494404505417,-82.95911372567505" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">72x</td>
+<tr class="land" data-end="2026-10-22T09:30:00">
+  <td class="num ratio">72x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$65,000<span class="sub">SEV $32,500</span></td>
-  <td class="num">$66,000</td>
+  <td class="num">$65,000<span class="sub">floor</span></td>
+  <td class="num">$65,000<span class="sub">county</span></td>
+  <td class="num">$66,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000989&batchId=34" target="_blank" rel="noreferrer">12833 ROSEMARY</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 9:30 AM</td>
+  <td class="end" data-end="2026-10-22T09:30:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000989&batchId=34" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/12833-rosemary-st-48213-77f71fe4-e3f5-413c-b8c4-a14561420dea" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.413121545232826,-82.98030872608646" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">70x</td>
+<tr class="house" data-end="2026-10-22T12:30:00">
+  <td class="num ratio">67x</td>
   <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$62,600<span class="sub">SEV $31,300</span></td>
-  <td class="num">$154,000</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000594&batchId=18" target="_blank" rel="noreferrer">1645 CALVERT</a><span class="sub">DETROIT · vacant land · Multi-Family Dwellings (Generic, 2+)</span></td>
-  <td>Oct 21, 1:30 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000594&batchId=18" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/1645-calvert-st-48206-e758d114-3d74-4b3a-b0b9-6f04d16ee72b" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38342054478912,-83.10172322569139" target="_blank" rel="noreferrer">Street</a></td>
-</tr>
-<tr class="house">
-  <td class="num">67x</td>
-  <td class="num">$900<span class="sub">0 bids</span></td>
-  <td class="num">$60,000<span class="sub">SEV $30,000</span></td>
-  <td class="num">$75,000</td>
+  <td class="num">$60,000<span class="sub">floor</span></td>
+  <td class="num">$60,000<span class="sub">county</span></td>
+  <td class="num">$75,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001299&batchId=46" target="_blank" rel="noreferrer">14632 DOLPHIN</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
-  <td>Oct 22, 12:30 PM</td>
+  <td class="end" data-end="2026-10-22T12:30:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001299&batchId=46" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/14632-dolphin-st-48223-1101245f-ebf2-4250-abc2-0f9fc18990c8" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.39499754415362,-83.25878922622447" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">54x</td>
-  <td class="num">$3,100<span class="sub">27 bids</span></td>
-  <td class="num">$168,400<span class="sub">SEV $84,200</span></td>
-  <td class="num">—</td>
+<tr class="land" data-end="2026-10-22T11:45:00">
+  <td class="num ratio">67x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$60,000<span class="sub">floor</span></td>
+  <td class="num">$75,000<span class="sub">county</span></td>
+  <td class="num">$60,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001209&batchId=43" target="_blank" rel="noreferrer">8948 WHITCOMB</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T11:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001209&batchId=43" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/8948-whitcomb-st-48228-449854b4-2cd5-47ed-b613-1419ca90372a" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.36034402112916,-83.19462596835626" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T14:30:00">
+  <td class="num ratio">66x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$59,200<span class="sub">floor</span></td>
+  <td class="num">$59,200<span class="sub">county</span></td>
+  <td class="num">$106,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000702&batchId=22" target="_blank" rel="noreferrer">3693 PULFORD</a><span class="sub">DETROIT · vacant land · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T14:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000702&batchId=22" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/3693-pulford-st-48207-31aacf4f-c5d3-4b55-badd-d330c00e0e7c" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.36188741849162,-83.02310727312724" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-21T15:45:00">
+  <td class="num ratio">65x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$58,600<span class="sub">floor</span></td>
+  <td class="num">$58,600<span class="sub">county</span></td>
+  <td class="num">$130,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000832&batchId=27" target="_blank" rel="noreferrer">12072 STOEPEL</a><span class="sub">DETROIT · structure not occupied · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T15:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000832&batchId=27" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/12072-stoepel-st-48204-c1153250-2898-4765-8de2-5972a3b6346f" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.377278783499186,-83.13990508083717" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T10:00:00">
+  <td class="num ratio">65x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$58,600<span class="sub">floor</span></td>
+  <td class="num">$58,600<span class="sub">county</span></td>
+  <td class="num">$107,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001036&batchId=36" target="_blank" rel="noreferrer">19341 FAIRPORT</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T10:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001036&batchId=36" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/19341-fairport-st-48205-b210507f-cb5d-4cf8-9520-dc967c829297" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.43719554507653,-82.9916472256599" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-22T10:00:00">
+  <td class="num ratio">64x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$57,800<span class="sub">floor</span></td>
+  <td class="num">$57,800<span class="sub">county</span></td>
+  <td class="num">$71,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001040&batchId=36" target="_blank" rel="noreferrer">20255 BARLOW</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T10:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001040&batchId=36" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/20255-barlow-st-48205-587b686d-3fdf-4d43-a47c-a2bbeb9fdc3e" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.446300544986144,-82.996887725742" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T15:00:00">
+  <td class="num ratio">64x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$57,600<span class="sub">floor</span></td>
+  <td class="num">$57,600<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000746&batchId=24" target="_blank" rel="noreferrer">5001 ELMHURST</a><span class="sub">DETROIT · vacant land · Auto repair, auto parts, Garage</span></td>
+  <td class="end" data-end="2026-10-21T15:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000746&batchId=24" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/5001-elmhurst-st-48204-3e27aa65-c8a2-4cb3-b734-6816edf0d99e" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37646688907965,-83.13601324278572" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:00:00">
+  <td class="num ratio">58x</td>
+  <td class="num">$2,900<span class="sub">3 bids</span></td>
+  <td class="num">$169,200<span class="sub">floor</span></td>
+  <td class="num">$169,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000412&batchId=15" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
+  <td class="end" data-end="2026-10-22T14:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000412&batchId=15" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48205" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T15:30:00">
+  <td class="num ratio">57x</td>
+  <td class="num">$1,000<span class="sub">2 bids</span></td>
+  <td class="num">$57,200<span class="sub">floor</span></td>
+  <td class="num">$57,200<span class="sub">county</span></td>
+  <td class="num">$97,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000802&batchId=26" target="_blank" rel="noreferrer">5379 JOY</a><span class="sub">DETROIT · occupied · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T15:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000802&batchId=26" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/5379-joy-rd-48204-6b4db48f-eeee-4f79-b9a2-f922b78d9761" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.36270619933746,-83.13211381928159" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-21T16:30:00">
+  <td class="num ratio">57x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$51,200<span class="sub">floor</span></td>
+  <td class="num">$51,200<span class="sub">county</span></td>
+  <td class="num">$55,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000899&batchId=30" target="_blank" rel="noreferrer">5102 SEYBURN</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T16:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000899&batchId=30" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/5102-seyburn-st-48213-cd3de68d-6319-4155-8e82-0ee37993962a" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37703072815033,-83.01431778768493" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T12:15:00">
+  <td class="num ratio">53x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$47,800<span class="sub">floor</span></td>
+  <td class="num">$47,800<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001277&batchId=45" target="_blank" rel="noreferrer">15851 BRAILE</a><span class="sub">DETROIT · vacant land · RESIDENTIAL</span></td>
+  <td class="end" data-end="2026-10-22T12:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001277&batchId=45" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=22105656.&state=MI&zip=48219&q=15851+BRAILE%2C+DETROIT%2C+MI%2C+48219" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">53x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$47,800<span class="sub">floor</span></td>
+  <td class="num">$47,800<span class="sub">county</span></td>
+  <td class="num">$102,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001338&batchId=48" target="_blank" rel="noreferrer">46 STEVENS</a><span class="sub">HIGHLAND PARK · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001338&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/46-stevens-st-48203-5a488e8d-b1f9-4bd6-9135-eaf24349bd18" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.41603888889242,-83.10206912531476" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:45:00">
+  <td class="num ratio">53x</td>
+  <td class="num">$3,200<span class="sub">28 bids</span></td>
+  <td class="num">$168,400<span class="sub">floor</span></td>
+  <td class="num">$168,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000925&batchId=31" target="_blank" rel="noreferrer">7326 MCDONALD</a><span class="sub">DETROIT · vacant land · Manufacturing (light)</span></td>
-  <td>Oct 21, 4:45 PM</td>
+  <td class="end" data-end="2026-10-21T16:45:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000925&batchId=31" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/7326-mcdonald-st-48210-1e7737b8-1fd4-4369-be26-9849c78e7baf" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.34653954469076,-83.14670572548488" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="house">
-  <td class="num">44x</td>
-  <td class="num">$1,800<span class="sub">10 bids</span></td>
-  <td class="num">$79,600<span class="sub">SEV $39,800</span></td>
-  <td class="num">$125,000</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000580&batchId=17" target="_blank" rel="noreferrer">668 W HOLLYWOOD</a><span class="sub">DETROIT · structure not occupied · Duplex (2 units, any combination)</span></td>
-  <td>Oct 21, 1:15 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000580&batchId=17" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/668-w-hollywood-48203-7e117b9a-1ecc-4463-b738-c13a706294a2" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.43072604488323,-83.11232872585599" target="_blank" rel="noreferrer">Street</a></td>
+<tr class="land" data-end="2026-10-21T14:45:00">
+  <td class="num ratio">50x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$45,400<span class="sub">floor</span></td>
+  <td class="num">$45,400<span class="sub">county</span></td>
+  <td class="num">$127,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000711&batchId=23" target="_blank" rel="noreferrer">3700 ELLERY</a><span class="sub">DETROIT · vacant land · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T14:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000711&batchId=23" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/3700-ellery-st-48207-971a3e97-954e-439e-8470-4de575c3ae84" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.36129654518302,-83.0244437256631" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">30x</td>
-  <td class="num">$2,500<span class="sub">19 bids</span></td>
-  <td class="num">$74,400<span class="sub">SEV $37,200</span></td>
-  <td class="num">—</td>
+<tr class="land" data-end="2026-10-22T11:00:00">
+  <td class="num ratio">50x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$44,800<span class="sub">floor</span></td>
+  <td class="num">$44,800<span class="sub">county</span></td>
+  <td class="num">$94,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001153&batchId=40" target="_blank" rel="noreferrer">16246 WARD</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T11:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001153&batchId=40" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/16246-ward-st-48235-0bcaa731-a32d-4ae0-bf25-d2cd8d02e8c7" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.41158951461449,-83.17384020971123" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T11:15:00">
+  <td class="num ratio">50x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$44,800<span class="sub">floor</span></td>
+  <td class="num">$44,800<span class="sub">county</span></td>
+  <td class="num">$78,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001165&batchId=41" target="_blank" rel="noreferrer">11691 LITTLEFIELD</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T11:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001165&batchId=41" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/11691-littlefield-st-48227-c95f16b3-4159-4d23-8bb2-90c44690e9ec" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.374417544669605,-83.17594672567213" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T11:45:00">
+  <td class="num ratio">49x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$44,000<span class="sub">floor</span></td>
+  <td class="num">$44,000<span class="sub">county</span></td>
+  <td class="num">$61,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001216&batchId=43" target="_blank" rel="noreferrer">11738 MANSFIELD</a><span class="sub">DETROIT · vacant land · Bungalow (Residential)</span></td>
+  <td class="end" data-end="2026-10-22T11:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001216&batchId=43" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/11738-mansfield-st-48227-f4ef97ea-5806-4a87-90e5-0a5a75c34a17" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37454628562479,-83.20330089434117" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-22T10:15:00">
+  <td class="num ratio">48x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$43,600<span class="sub">floor</span></td>
+  <td class="num">$43,600<span class="sub">county</span></td>
+  <td class="num">$159,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001059&batchId=37" target="_blank" rel="noreferrer">4625 MONTCLAIR</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T10:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001059&batchId=37" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4625-montclair-st-48214-a557e492-4bd8-44ea-a891-8618c85c24d9" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38375087667938,-82.98896558406418" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:45:00">
+  <td class="num ratio">48x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$43,200<span class="sub">floor</span></td>
+  <td class="num">$43,200<span class="sub">county</span></td>
+  <td class="num">$119,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000928&batchId=31" target="_blank" rel="noreferrer">8293 CLOVERLAWN</a><span class="sub">DETROIT · occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T16:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000928&batchId=31" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/8293-cloverlawn-st-48204-2c2816d7-aa5f-48d5-b771-3dadd25db344" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.355619065280074,-83.15112698521581" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T14:45:00">
+  <td class="num ratio">48x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$43,200<span class="sub">floor</span></td>
+  <td class="num">$43,200<span class="sub">county</span></td>
+  <td class="num">$374,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000712&batchId=23" target="_blank" rel="noreferrer">5710 MCDOUGALL</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T14:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000712&batchId=23" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/5710-mcdougall-st-48211-fa947837-6d6b-47d9-8c74-56e85fe1771c" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37302804513347,-83.03913172539399" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-22T10:15:00">
+  <td class="num ratio">48x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$43,200<span class="sub">floor</span></td>
+  <td class="num">$43,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001068&batchId=37" target="_blank" rel="noreferrer">693 CONNER</a><span class="sub">DETROIT · structure not occupied · COMMERICAL</span></td>
+  <td class="end" data-end="2026-10-22T10:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001068&batchId=37" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=21046487.&state=MI&zip=48213&q=693+CONNER%2C+DETROIT%2C+MI%2C+48213" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T10:15:00">
+  <td class="num ratio">47x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$42,600<span class="sub">floor</span></td>
+  <td class="num">$42,600<span class="sub">county</span></td>
+  <td class="num">$130,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001063&batchId=37" target="_blank" rel="noreferrer">3925 FAIRVIEW</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T10:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001063&batchId=37" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/3925-fairview-st-48214-86397b77-bc42-420e-8afa-e1b3f6b6aa46" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37916318736368,-82.98307247760685" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-21T15:45:00">
+  <td class="num ratio">47x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$42,200<span class="sub">floor</span></td>
+  <td class="num">$42,200<span class="sub">county</span></td>
+  <td class="num">$87,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000819&batchId=27" target="_blank" rel="noreferrer">7532 PEMBROKE</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T15:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000819&batchId=27" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/7532-pembroke-ave-48221-b96af014-9186-4831-8d97-34f1466a2176" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.43896880150599,-83.14816518222283" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-22T11:00:00">
+  <td class="num ratio">47x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$42,200<span class="sub">floor</span></td>
+  <td class="num">$42,200<span class="sub">county</span></td>
+  <td class="num">$69,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001137&batchId=40" target="_blank" rel="noreferrer">23226 FLORENCE DETROIT</a><span class="sub">DETROIT · structure not 
+
+occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T11:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001137&batchId=40" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/23226-florence-st-48219-8ab57fe2-ebdc-49f0-bc41-6fe8af3a2727" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.41000772560385,-83.26774434248811" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">46x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$41,800<span class="sub">floor</span></td>
+  <td class="num">$41,800<span class="sub">county</span></td>
+  <td class="num">$91,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001339&batchId=48" target="_blank" rel="noreferrer">104 STEVENS</a><span class="sub">HIGHLAND PARK · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001339&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/104-stevens-st-48203-323693d9-5c28-4b78-916d-8a6104e11249" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.416748236459476,-83.10015414286194" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:45:00">
+  <td class="num ratio">46x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$41,600<span class="sub">floor</span></td>
+  <td class="num">$41,600<span class="sub">county</span></td>
+  <td class="num">$94,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000912&batchId=31" target="_blank" rel="noreferrer">6911 BURWELL</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T16:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000912&batchId=31" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/6911-burwell-st-48210-55508db3-f060-43c8-b8e5-24e678f2d98b" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.343266818851376,-83.13844504124593" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:30:00">
+  <td class="num ratio">45x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$40,600<span class="sub">floor</span></td>
+  <td class="num">$40,600<span class="sub">county</span></td>
+  <td class="num">$149,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000885&batchId=30" target="_blank" rel="noreferrer">13156 MEYERS</a><span class="sub">DETROIT · vacant land · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T16:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000885&batchId=30" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/13156-meyers-rd-48227-7fd393df-b638-468e-b76b-304c6929e9e7" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.3843000690877,-83.16823998425802" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">44x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$39,800<span class="sub">floor</span></td>
+  <td class="num">$39,800<span class="sub">county</span></td>
+  <td class="num">$144,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001337&batchId=48" target="_blank" rel="noreferrer">20076 E 8 MILE</a><span class="sub">HARPER WOODS · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001337&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/harper-woods/20076-e-8-mile-rd-48225-74772265-924f-49e8-82a5-81fbf6dabc7e" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.450415520023896,-82.92163083703674" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">43x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$39,000<span class="sub">floor</span></td>
+  <td class="num">$39,000<span class="sub">county</span></td>
+  <td class="num">$76,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001333&batchId=48" target="_blank" rel="noreferrer">4645 8TH</a><span class="sub">ECORSE · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001333&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/ecorse/4645-8th-st-48229-885266db-3236-42f8-af19-6ce55239fef2" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.23961244717614,-83.15810575623917" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T09:15:00">
+  <td class="num ratio">43x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$38,600<span class="sub">floor</span></td>
+  <td class="num">$38,600<span class="sub">county</span></td>
+  <td class="num">$87,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000962&batchId=33" target="_blank" rel="noreferrer">9137 FALCON</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T09:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000962&batchId=33" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/9137-falcon-st-48209-9169fb93-8a87-49e4-a8c3-c0a0ec7c0535" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.30263954478888,-83.13277372557062" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T09:30:00">
+  <td class="num ratio">43x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$38,400<span class="sub">floor</span></td>
+  <td class="num">$38,400<span class="sub">county</span></td>
+  <td class="num">$992,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000998&batchId=34" target="_blank" rel="noreferrer">11561 SANFORD</a><span class="sub">DETROIT · vacant land · Bungalow (Residential)</span></td>
+  <td class="end" data-end="2026-10-22T09:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000998&batchId=34" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/11561-sanford-st-48205-38396fe2-2594-454f-9bcc-160f2320f844" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.412396684968236,-82.99880369164809" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:00:00">
+  <td class="num ratio">41x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$37,000<span class="sub">floor</span></td>
+  <td class="num">$37,000<span class="sub">county</span></td>
+  <td class="num">$107,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000851&batchId=28" target="_blank" rel="noreferrer">8191 CENTRAL</a><span class="sub">DETROIT · vacant land · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T16:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000851&batchId=28" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/8191-central-st-48204-527b0668-53ad-4c75-b430-5839e2d69fd6" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.35477756530452,-83.14648898481644" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:45:00">
+  <td class="num ratio">41x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$37,000<span class="sub">floor</span></td>
+  <td class="num">$42,600<span class="sub">county</span></td>
+  <td class="num">$37,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000920&batchId=31" target="_blank" rel="noreferrer">8851 AURORA</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T16:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000920&batchId=31" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/8851-aurora-st-48204-53457d28-f557-43cb-a765-1f999558facf" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37214279981135,-83.15739319311506" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T14:00:00">
+  <td class="num ratio">40x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$36,200<span class="sub">floor</span></td>
+  <td class="num">$36,200<span class="sub">county</span></td>
+  <td class="num">$89,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000645&batchId=20" target="_blank" rel="noreferrer">20251 OMIRA</a><span class="sub">DETROIT · vacant lot · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T14:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000645&batchId=20" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/20251-omira-st-48203-34780bf3-7496-471c-bd20-3921af76a059" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.44438154441382,-83.09663822631119" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T12:30:00">
+  <td class="num ratio">40x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$36,000<span class="sub">floor</span></td>
+  <td class="num">$36,000<span class="sub">county</span></td>
+  <td class="num">$63,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001288&batchId=46" target="_blank" rel="noreferrer">14301 TRINITY</a><span class="sub">DETROIT · occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T12:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001288&batchId=46" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/14301-trinity-st-48223-d57da301-8cd6-41d9-a2cf-4c6c9ea449b3" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.390964544399736,-83.24816722553619" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:30:00">
+  <td class="num ratio">38x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$34,600<span class="sub">floor</span></td>
+  <td class="num">$34,600<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001396&batchId=50" target="_blank" rel="noreferrer">VACANT GREGORY</a><span class="sub">LINCOLN PARK · vacant land · RESIDENTIAL</span></td>
+  <td class="end" data-end="2026-10-22T13:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001396&batchId=50" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=45016020961300&state=MI&zip=48146&q=VACANT+GREGORY%2C+LINCOLN+PARK%2C+MI%2C+48146" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T17:00:00">
+  <td class="num ratio">38x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$34,000<span class="sub">floor</span></td>
+  <td class="num">$34,000<span class="sub">county</span></td>
+  <td class="num">$87,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000957&batchId=32" target="_blank" rel="noreferrer">4508 FISCHER</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T17:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000957&batchId=32" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4508-fischer-st-48214-6f8962b8-90cb-4772-bd19-2dbed8cc22d5" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.37605495786933,-83.00357055530279" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T15:30:00">
+  <td class="num ratio">38x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$33,800<span class="sub">floor</span></td>
+  <td class="num">$33,800<span class="sub">county</span></td>
+  <td class="num">$120,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000787&batchId=26" target="_blank" rel="noreferrer">2568 CONCORD</a><span class="sub">DETROIT · vacant land · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T15:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000787&batchId=26" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/2568-concord-st-48207-83ed0292-9b74-4674-a28f-95917e417bba" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.35885001619476,-83.01319010273781" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:00:00">
+  <td class="num ratio">38x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$33,800<span class="sub">floor</span></td>
+  <td class="num">$33,800<span class="sub">county</span></td>
+  <td class="num">$110,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000849&batchId=28" target="_blank" rel="noreferrer">2927 EWALD</a><span class="sub">DETROIT · vacant lot · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T16:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000849&batchId=28" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/2927-ewald-cir-48238-cc3a8eca-1022-45ee-bbc1-ea23cc9c8f08" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38775454460829,-83.14507022552701" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:30:00">
+  <td class="num ratio">38x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$33,800<span class="sub">floor</span></td>
+  <td class="num">$33,800<span class="sub">county</span></td>
+  <td class="num">$116,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001395&batchId=50" target="_blank" rel="noreferrer">1628 CHANDLER</a><span class="sub">LINCOLN PARK · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T13:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001395&batchId=50" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/lincoln-park/1628-chandler-ave-48146-59c61303-2739-4b88-8694-e3f334c9454c" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.250882055579396,-83.17279804828803" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T14:15:00">
+  <td class="num ratio">37x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$33,600<span class="sub">floor</span></td>
+  <td class="num">$33,600<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000663&batchId=21" target="_blank" rel="noreferrer">2581 ELMHURST</a><span class="sub">DETROIT · vacant land · Commercial-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-21T14:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000663&batchId=21" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/2581-elmhurst-st-48206-b596b165-6391-4944-8243-ed2711a54db7" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38432554466364,-83.11575122565161" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T10:30:00">
+  <td class="num ratio">37x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$33,400<span class="sub">floor</span></td>
+  <td class="num">$33,400<span class="sub">county</span></td>
+  <td class="num">$80,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001083&batchId=38" target="_blank" rel="noreferrer">2216 MARLBOROUGH</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T10:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001083&batchId=38" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/2216-marlborough-st-48215-fc679070-657f-4293-b8e0-3648109cc9ee" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38071907826923,-82.94766684222762" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">37x</td>
+  <td class="num">$1,100<span class="sub">3 bids</span></td>
+  <td class="num">$40,800<span class="sub">floor</span></td>
+  <td class="num">$40,800<span class="sub">county</span></td>
+  <td class="num">$139,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001350&batchId=48" target="_blank" rel="noreferrer">62 GLENDALE</a><span class="sub">HIGHLAND PARK · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001350&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/62-glendale-st-48203-43d3bf52-8321-4a54-8f09-764e71e06fba" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.398944138442744,-83.09529885003887" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-22T11:45:00">
+  <td class="num ratio">37x</td>
+  <td class="num">$1,500<span class="sub">11 bids</span></td>
+  <td class="num">$55,600<span class="sub">floor</span></td>
+  <td class="num">$55,600<span class="sub">county</span></td>
+  <td class="num">$77,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001228&batchId=43" target="_blank" rel="noreferrer">19944 FERGUSON</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T11:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001228&batchId=43" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/19944-ferguson-st-48235-a8f62f4f-1540-4cff-9fb6-4629abd782f9" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.438451525970926,-83.21081346699597" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T09:45:00">
+  <td class="num ratio">36x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$32,600<span class="sub">floor</span></td>
+  <td class="num">$32,600<span class="sub">county</span></td>
+  <td class="num">$55,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001018&batchId=35" target="_blank" rel="noreferrer">13638 SARATOGA</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T09:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001018&batchId=35" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/13638-saratoga-st-48205-60679761-6fad-40fe-824b-0818825fb10d" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.43198075670743,-82.98413898322765" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:00:00">
+  <td class="num ratio">36x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$32,400<span class="sub">floor</span></td>
+  <td class="num">$32,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001447&batchId=52" target="_blank" rel="noreferrer">0 WAYNECORSE</a><span class="sub">ROMULUS · vacant land · COMMERICAL</span></td>
+  <td class="end" data-end="2026-10-22T14:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001447&batchId=52" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=80020030012000&state=MI&zip=48174&q=0+WAYNECORSE%2C+ROMULUS%2C+MI%2C+48174" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="house" data-end="2026-10-21T14:00:00">
+  <td class="num ratio">35x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$31,200<span class="sub">floor</span></td>
+  <td class="num">$31,200<span class="sub">county</span></td>
+  <td class="num">$54,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000657&batchId=20" target="_blank" rel="noreferrer">2407 CORTLAND</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T14:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000657&batchId=20" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/2407-cortland-st-48206-81229fe1-023c-4906-b39f-2357709518b3" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38749638384724,-83.11434585503652" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T14:45:00">
+  <td class="num ratio">34x</td>
+  <td class="num">$1,000<span class="sub">2 bids</span></td>
+  <td class="num">$34,200<span class="sub">floor</span></td>
+  <td class="num">$34,200<span class="sub">county</span></td>
+  <td class="num">$76,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000725&batchId=23" target="_blank" rel="noreferrer">13412 JUSTINE</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T14:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000725&batchId=23" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/hamtramck/13412-justine-st-48212-e2c13dbf-b102-41cb-a6e5-f078b99f74da" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.41547307308337,-83.05562435213943" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:00:00">
+  <td class="num ratio">34x</td>
+  <td class="num">$1,800<span class="sub">0 bids</span></td>
+  <td class="num">$61,400<span class="sub">floor</span></td>
+  <td class="num">$61,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000367&batchId=15" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
+  <td class="end" data-end="2026-10-22T14:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000367&batchId=15" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48223" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:15:00">
+  <td class="num ratio">34x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$30,200<span class="sub">floor</span></td>
+  <td class="num">$30,200<span class="sub">county</span></td>
+  <td class="num">$94,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000867&batchId=29" target="_blank" rel="noreferrer">13539 CHERRYLAWN</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T16:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000867&batchId=29" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/13539-cherrylawn-st-48238-270df6fa-df19-4209-828e-56df805d0a01" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.386793044606236,-83.1543552258422" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">33x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$30,000<span class="sub">floor</span></td>
+  <td class="num">$30,000<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001412&batchId=51" target="_blank" rel="noreferrer">30490 STEWART</a><span class="sub">WESTLAND · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001412&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/westland/30490-stewart-ln-48186-0f16573f-2ed6-469b-968a-9f2f56929483" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.292451330405406,-83.34288345156897" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">33x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$30,000<span class="sub">floor</span></td>
+  <td class="num">$30,000<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001413&batchId=51" target="_blank" rel="noreferrer">30480 STEWART</a><span class="sub">WESTLAND · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001413&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/westland/30480-stewart-ln-48186-589c4938-370b-48e6-b99c-c98a5c1b1a89" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.292451330405406,-83.34288345156897" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">33x</td>
+  <td class="num">$900<span class="sub">2 bids</span></td>
+  <td class="num">$30,000<span class="sub">floor</span></td>
+  <td class="num">$30,000<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001414&batchId=51" target="_blank" rel="noreferrer">30470 STEWART</a><span class="sub">WESTLAND · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001414&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/westland/30470-stewart-ln-48186-9c6a4307-ca6d-4781-ad50-e329a19bd8f6" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.296284,-83.341206" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-22T09:30:00">
+  <td class="num ratio">33x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$29,800<span class="sub">floor</span></td>
+  <td class="num">$29,800<span class="sub">county</span></td>
+  <td class="num">$85,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000990&batchId=34" target="_blank" rel="noreferrer">14720 KILBOURNE</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T09:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000990&batchId=34" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/14720-kilbourne-st-48213-bff43268-fd46-4c1f-9a9c-23b5c8d4aa9d" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.41645931028008,-82.96950726048803" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:15:00">
+  <td class="num ratio">33x</td>
+  <td class="num">$1,800<span class="sub">1 bid</span></td>
+  <td class="num">$59,400<span class="sub">floor</span></td>
+  <td class="num">$59,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000460&batchId=16" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
+  <td class="end" data-end="2026-10-22T14:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000460&batchId=16" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48204" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T15:00:00">
+  <td class="num ratio">33x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$29,600<span class="sub">floor</span></td>
+  <td class="num">$29,600<span class="sub">county</span></td>
+  <td class="num">$138,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000749&batchId=24" target="_blank" rel="noreferrer">4306 CLEMENTS</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T15:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000749&batchId=24" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4306-clements-st-48238-c9271c35-a58b-46c0-b33a-f49d8609e973" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38839808484833,-83.13793465204407" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T09:45:00">
+  <td class="num ratio">32x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$29,000<span class="sub">floor</span></td>
+  <td class="num">$29,000<span class="sub">county</span></td>
+  <td class="num">$65,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001010&batchId=35" target="_blank" rel="noreferrer">15061 HAZELRIDGE</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T09:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001010&batchId=35" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/15061-hazelridge-st-48205-8180fed7-3b6b-4bb2-9631-a66c865be10c" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.42501854535971,-82.96639272555291" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">32x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$29,000<span class="sub">floor</span></td>
+  <td class="num">$29,000<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001410&batchId=51" target="_blank" rel="noreferrer">0 DEVOE</a><span class="sub">SOUTHGATE · vacant land · RESIDENTIAL</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001410&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=53002010075000&state=MI&zip=48195&q=0+DEVOE%2C+SOUTHGATE%2C+MI%2C+48195" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T16:45:00">
+  <td class="num ratio">32x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$28,600<span class="sub">floor</span></td>
+  <td class="num">$28,600<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000911&batchId=31" target="_blank" rel="noreferrer">5385 E OUTER</a><span class="sub">DETROIT · vacant land · Retail Stores (Personal Services, Photography, Travel)</span></td>
+  <td class="end" data-end="2026-10-21T16:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000911&batchId=31" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/5385-e-outer-dr-48234-add7ed1c-9859-45da-b5cd-373fdb5e354b" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.434692045271504,-83.01401722588784" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">31x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$28,200<span class="sub">floor</span></td>
+  <td class="num">$28,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001422&batchId=51" target="_blank" rel="noreferrer">17252 HIGDON DR</a><span class="sub">BROWNSTOWN · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001422&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/brownstown/17252-higdon-dr-48193-d5867b4e-7214-47e4-adca-083ccf7d5e4a" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.179730598804085,-83.25301400684958" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">31x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$27,600<span class="sub">floor</span></td>
+  <td class="num">$27,600<span class="sub">county</span></td>
+  <td class="num">$176,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001352&batchId=48" target="_blank" rel="noreferrer">101 E BUENA VISTA</a><span class="sub">HIGHLAND PARK · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001352&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/101-e-buena-vista-st-48203-3b2ec7d5-6bd2-49b6-bb23-2c6f2ec0657e" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.40249838490908,-83.09058325381157" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-21T16:00:00">
+  <td class="num ratio">30x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$27,200<span class="sub">floor</span></td>
+  <td class="num">$27,200<span class="sub">county</span></td>
+  <td class="num">$140,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000835&batchId=28" target="_blank" rel="noreferrer">12177 STOEPEL</a><span class="sub">DETROIT · structure not occupied · Duplex (2 units, any combination)</span></td>
+  <td class="end" data-end="2026-10-21T16:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000835&batchId=28" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/12177-stoepel-st-48204-d165cec5-d369-4819-8164-da872a10607f" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.378674544825145,-83.14057322555058" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">30x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$26,800<span class="sub">floor</span></td>
+  <td class="num">$26,800<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001415&batchId=51" target="_blank" rel="noreferrer">0 ANNAPOLIS</a><span class="sub">WESTLAND · vacant land · RESIDENTIAL</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001415&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=56084010024000&state=MI&zip=48186&q=0+ANNAPOLIS%2C+WESTLAND%2C+MI%2C+48186" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">30x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$26,800<span class="sub">floor</span></td>
+  <td class="num">$26,800<span class="sub">county</span></td>
+  <td class="num">$133,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001416&batchId=51" target="_blank" rel="noreferrer">VACANT ETON</a><span class="sub">WESTLAND · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001416&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/westland/eton-48186-3ea24f53-b966-49a0-b92b-078b5dad0806" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.273989190058366,-83.31824487738861" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T14:30:00">
+  <td class="num ratio">29x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$25,800<span class="sub">floor</span></td>
+  <td class="num">$25,800<span class="sub">county</span></td>
+  <td class="num">$89,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000701&batchId=22" target="_blank" rel="noreferrer">3393 PRESTON</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T14:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000701&batchId=22" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/3393-preston-st-48207-59bbbc83-f786-433a-8d52-11861c0066e6" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.358664044735505,-83.02497572508793" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:00:00">
+  <td class="num ratio">29x</td>
+  <td class="num">$2,600<span class="sub">20 bids</span></td>
+  <td class="num">$74,400<span class="sub">floor</span></td>
+  <td class="num">$74,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001448&batchId=52" target="_blank" rel="noreferrer">32185 ECORSE</a><span class="sub">ROMULUS · vacant land · Commercial-Vacant Land</span></td>
-  <td>Oct 22, 2:00 PM</td>
+  <td class="end" data-end="2026-10-22T14:00:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001448&batchId=52" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/romulus/32185-ecorse-rd-48174-98cc4941-a6c4-4a10-863a-1ea3b528afec" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.25175817890795,-83.3549866035818" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">25x</td>
-  <td class="num">$3,500<span class="sub">11 bids</span></td>
-  <td class="num">$86,000<span class="sub">SEV $43,000</span></td>
-  <td class="num">$298,000</td>
+<tr class="house" data-end="2026-10-22T09:15:00">
+  <td class="num ratio">28x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$24,800<span class="sub">floor</span></td>
+  <td class="num">$24,800<span class="sub">county</span></td>
+  <td class="num">$62,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000973&batchId=33" target="_blank" rel="noreferrer">26367 W OUTER</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T09:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000973&batchId=33" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/26367-w-outer-dr-48217-d50c47c5-261a-466f-98b3-aa1deb219d86" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.258038683568934,-83.16321627999692" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:30:00">
+  <td class="num ratio">26x</td>
+  <td class="num">$1,600<span class="sub">9 bids</span></td>
+  <td class="num">$41,400<span class="sub">floor</span></td>
+  <td class="num">$41,400<span class="sub">county</span></td>
+  <td class="num">$112,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001394&batchId=50" target="_blank" rel="noreferrer">1458 COLLEGE</a><span class="sub">LINCOLN PARK · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T13:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001394&batchId=50" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/lincoln-park/1458-college-ave-48146-bf3501c3-faa2-447d-be3d-a15772f94830" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.2597397836929,-83.17410320427035" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="house" data-end="2026-10-22T10:00:00">
+  <td class="num ratio">26x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$23,200<span class="sub">floor</span></td>
+  <td class="num">$23,200<span class="sub">county</span></td>
+  <td class="num">$42,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001049&batchId=36" target="_blank" rel="noreferrer">5250 BEWICK</a><span class="sub">DETROIT · structure not occupied · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T10:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001049&batchId=36" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/5250-bewick-st-48213-10cedb14-9c8d-41ab-bfb9-594aecb40e97" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.386387545104604,-82.99638622576549" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T10:15:00">
+  <td class="num ratio">26x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$23,200<span class="sub">floor</span></td>
+  <td class="num">$23,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001069&batchId=37" target="_blank" rel="noreferrer">4121 ALGONQUIN</a><span class="sub">DETROIT · vacant land · Commercial-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T10:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001069&batchId=37" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4121-algonquin-st-48215-aa91d926-7a20-471e-af06-e8706c79d177" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.3844391986747,-82.9661491640122" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-21T15:45:00">
+  <td class="num ratio">26x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$23,000<span class="sub">floor</span></td>
+  <td class="num">$23,000<span class="sub">county</span></td>
+  <td class="num">$85,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000820&batchId=27" target="_blank" rel="noreferrer">4073 31ST ST</a><span class="sub">DETROIT · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-21T15:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000820&batchId=27" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/4073-31st-st-48210-c803dac7-258a-4ee1-8202-aca8086b6777" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.33443454483249,-83.11096622512363" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">26x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$23,000<span class="sub">floor</span></td>
+  <td class="num">$23,000<span class="sub">county</span></td>
+  <td class="num">$142,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001347&batchId=48" target="_blank" rel="noreferrer">49 W GRAND</a><span class="sub">HIGHLAND PARK · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001347&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/49-w-grand-48203-3a789651-83ab-49f3-bc72-e140cb36f984" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.403240158750755,-83.09801235187581" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:30:00">
+  <td class="num ratio">25x</td>
+  <td class="num">$1,700<span class="sub">9 bids</span></td>
+  <td class="num">$43,200<span class="sub">floor</span></td>
+  <td class="num">$43,200<span class="sub">county</span></td>
+  <td class="num">$162,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001398&batchId=50" target="_blank" rel="noreferrer">19527 HARMAN</a><span class="sub">MELVINDALE · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001398&batchId=50" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/melvindale/19527-harman-st-48122-0ba13940-02db-4f66-baa6-58cce76ead3d" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.27718447949208,-83.19763647946141" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:15:00">
+  <td class="num ratio">25x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$22,800<span class="sub">floor</span></td>
+  <td class="num">$22,800<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001381&batchId=49" target="_blank" rel="noreferrer">INKSTER RD</a><span class="sub">INKSTER · vacant land · COMMERICAL</span></td>
+  <td class="end" data-end="2026-10-22T13:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001381&batchId=49" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=44014010014302&state=MI&zip=48141&q=INKSTER+RD%2C+INKSTER%2C+MI%2C+48141" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:00:00">
+  <td class="num ratio">24x</td>
+  <td class="num">$1,800<span class="sub">0 bids</span></td>
+  <td class="num">$43,800<span class="sub">floor</span></td>
+  <td class="num">$43,800<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000430&batchId=15" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
+  <td class="end" data-end="2026-10-22T14:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000430&batchId=15" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48206" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">24x</td>
+  <td class="num">$3,600<span class="sub">13 bids</span></td>
+  <td class="num">$86,000<span class="sub">floor</span></td>
+  <td class="num">$86,000<span class="sub">county</span></td>
+  <td class="num">$298,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001411&batchId=51" target="_blank" rel="noreferrer">16133 EUREKA</a><span class="sub">SOUTHGATE · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 1:45 PM</td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001411&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/southgate/16133-eureka-rd-48195-65b120d4-7af4-49cf-a6e7-c8dfaa5a01bb" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.19790063607693,-83.21983790673258" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">22x</td>
-  <td class="num">$6,800<span class="sub">47 bids</span></td>
-  <td class="num">$147,800<span class="sub">SEV $73,900</span></td>
-  <td class="num">—</td>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">24x</td>
+  <td class="num">$900<span class="sub">0 bids</span></td>
+  <td class="num">$21,200<span class="sub">floor</span></td>
+  <td class="num">$21,200<span class="sub">county</span></td>
+  <td class="num">$86,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001351&batchId=48" target="_blank" rel="noreferrer">181 BERESFORD</a><span class="sub">HIGHLAND PARK · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001351&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/highland-park/181-beresford-st-48203-272c2b05-3936-4137-903d-0f5d8583dc49" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.405013400011015,-83.08896348682524" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:00:00">
+  <td class="num ratio">23x</td>
+  <td class="num">$900<span class="sub">1 bid</span></td>
+  <td class="num">$20,400<span class="sub">floor</span></td>
+  <td class="num">$20,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001446&batchId=52" target="_blank" rel="noreferrer">0 KINLOCH</a><span class="sub">REDFORD · vacant land · RESIDENTIAL</span></td>
+  <td class="end" data-end="2026-10-22T14:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001446&batchId=52" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=79035010243301&state=MI&zip=48239&q=0+KINLOCH%2C+REDFORD%2C+MI%2C+48239" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:30:00">
+  <td class="num ratio">21x</td>
+  <td class="num">$6,900<span class="sub">48 bids</span></td>
+  <td class="num">$147,800<span class="sub">floor</span></td>
+  <td class="num">$147,800<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001393&batchId=50" target="_blank" rel="noreferrer">27037 CARLYSLE INKSTER</a><span class="sub">INKSTER · vacant land · Residential Real</span></td>
-  <td>Oct 22, 1:30 PM</td>
+  <td class="end" data-end="2026-10-22T13:30:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001393&batchId=50" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?parcel=44025990022000&state=MI&zip=48141&q=27037+CARLYSLE+INKSTER%2C+INKSTER%2C+MI%2C+48141" target="_blank" rel="noreferrer">Plottia</a></td>
 </tr>
-<tr class="house">
-  <td class="num">17x</td>
-  <td class="num">$12,000<span class="sub">68 bids</span></td>
-  <td class="num">$208,600<span class="sub">SEV $104,300</span></td>
-  <td class="num">—</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000512&batchId=16" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
-  <td>Oct 21, 1:00 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000512&batchId=16" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48227" target="_blank" rel="noreferrer">Plottia</a></td>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">20x</td>
+  <td class="num">$1,900<span class="sub">11 bids</span></td>
+  <td class="num">$37,800<span class="sub">floor</span></td>
+  <td class="num">$37,800<span class="sub">county</span></td>
+  <td class="num">$138,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001336&batchId=48" target="_blank" rel="noreferrer">20950 LANCASTER</a><span class="sub">HARPER WOODS · vacant land · Single Family Residential</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001336&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/harper-woods/20950-lancaster-st-48225-118a3e58-d15a-48ea-b893-6814b9f1ea2f" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.44065721147104,-82.91593241710734" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="house">
-  <td class="num">14x</td>
-  <td class="num">$5,100<span class="sub">15 bids</span></td>
-  <td class="num">$72,000<span class="sub">SEV $36,000</span></td>
-  <td class="num">—</td>
-  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000553&batchId=17" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
-  <td>Oct 21, 1:00 PM</td>
-  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000553&batchId=17" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48219" target="_blank" rel="noreferrer">Plottia</a></td>
+<tr class="land" data-end="2026-10-21T14:30:00">
+  <td class="num ratio">18x</td>
+  <td class="num">$1,700<span class="sub">11 bids</span></td>
+  <td class="num">$30,400<span class="sub">floor</span></td>
+  <td class="num">$30,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000690&batchId=22" target="_blank" rel="noreferrer">11722 DEXTER</a><span class="sub">DETROIT · vacant land · Commercial (General)</span></td>
+  <td class="end" data-end="2026-10-21T14:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000690&batchId=22" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/11722-dexter-ave-48206-e8630cd9-76d9-4878-830e-73e9f7092365" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.38012286878708,-83.12392899359574" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
-<tr class="land">
-  <td class="num">3x</td>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">18x</td>
+  <td class="num">$1,600<span class="sub">7 bids</span></td>
+  <td class="num">$28,200<span class="sub">floor</span></td>
+  <td class="num">$28,200<span class="sub">county</span></td>
+  <td class="num">$164,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001421&batchId=51" target="_blank" rel="noreferrer">17296 HIGDON DR</a><span class="sub">BROWNSTOWN · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001421&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/brownstown/17296-higdon-dr-48193-1838c0a3-867d-41f6-b2a8-3b4c44cab3d1" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.179730598804085,-83.25301400684958" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:15:00">
+  <td class="num ratio">15x</td>
+  <td class="num">$2,700<span class="sub">0 bids</span></td>
+  <td class="num">$40,200<span class="sub">floor</span></td>
+  <td class="num">$40,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000527&batchId=17" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
+  <td class="end" data-end="2026-10-22T14:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000527&batchId=17" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48228" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:00:00">
+  <td class="num ratio">14x</td>
+  <td class="num">$1,500<span class="sub">7 bids</span></td>
+  <td class="num">$21,400<span class="sub">floor</span></td>
+  <td class="num">$21,400<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001334&batchId=48" target="_blank" rel="noreferrer">18524 ELKHART</a><span class="sub">HARPER WOODS · vacant land · Commercial-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:00:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001334&batchId=48" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/harper-woods/18524-elkhart-st-48225-fe701f48-a6b1-4b57-8d78-57984d385e0c" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.43765116872954,-82.94985147167301" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:45:00">
+  <td class="num ratio">13x</td>
+  <td class="num">$2,100<span class="sub">15 bids</span></td>
+  <td class="num">$28,200<span class="sub">floor</span></td>
+  <td class="num">$28,200<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001423&batchId=51" target="_blank" rel="noreferrer">17236 HIGDON DR</a><span class="sub">BROWNSTOWN · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001423&batchId=51" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/brownstown/17236-higdon-dr-48193-edd19a1c-1c02-47ef-bbf0-f0397ab848fc" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.179730598804085,-83.25301400684958" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:15:00">
+  <td class="num ratio">13x</td>
+  <td class="num">$1,600<span class="sub">9 bids</span></td>
+  <td class="num">$20,000<span class="sub">floor</span></td>
+  <td class="num">$20,000<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001378&batchId=49" target="_blank" rel="noreferrer">27420 CARLYSLE</a><span class="sub">INKSTER · vacant land · Commercial-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001378&batchId=49" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/inkster/27420-carlysle-st-48141-79e2e094-841e-48f2-b018-75fb63266226" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.28301449348672,-83.30997416108104" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T10:45:00">
+  <td class="num ratio">8x</td>
+  <td class="num">$3,500<span class="sub">28 bids</span></td>
+  <td class="num">$27,600<span class="sub">floor</span></td>
+  <td class="num">$27,600<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001132&batchId=39" target="_blank" rel="noreferrer">17737 FENKELL</a><span class="sub">DETROIT · vacant land · Commercial-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T10:45:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001132&batchId=39" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/detroit/17737-fenkell-st-48227-b82ca171-4706-401e-8cf0-f2bf4c8c06ba" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.400724418084316,-83.21670929478934" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T14:15:00">
+  <td class="num ratio">7x</td>
+  <td class="num">$3,600<span class="sub">0 bids</span></td>
+  <td class="num">$23,600<span class="sub">floor</span></td>
+  <td class="num">$23,600<span class="sub">county</span></td>
+  <td class="num">—<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000546&batchId=17" target="_blank" rel="noreferrer"></a><span class="sub">DETROIT ·  · </span></td>
+  <td class="end" data-end="2026-10-22T14:15:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261000546&batchId=17" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/?state=MI&zip=48234" target="_blank" rel="noreferrer">Plottia</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T12:45:00">
+  <td class="num ratio">3x</td>
   <td class="num">$26,000<span class="sub">111 bids</span></td>
-  <td class="num">$88,400<span class="sub">SEV $44,200</span></td>
-  <td class="num">$138,000</td>
+  <td class="num">$88,400<span class="sub">floor</span></td>
+  <td class="num">$88,400<span class="sub">county</span></td>
+  <td class="num">$138,000<span class="sub">plottia</span></td>
   <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001323&batchId=47" target="_blank" rel="noreferrer">2423 BOLDT</a><span class="sub">DEARBORN · vacant land · Single Family Residential</span></td>
-  <td>Oct 22, 12:45 PM</td>
+  <td class="end" data-end="2026-10-22T12:45:00">…</td>
   <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001323&batchId=47" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/dearborn/2423-boldt-st-48124-bab594ff-02fe-426d-af8f-8881dae1790c" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.293868506056505,-83.27490810856393" target="_blank" rel="noreferrer">Street</a></td>
+</tr>
+<tr class="land" data-end="2026-10-22T13:30:00">
+  <td class="num ratio">1x</td>
+  <td class="num">$53,000<span class="sub">143 bids</span></td>
+  <td class="num">$43,200<span class="sub">floor</span></td>
+  <td class="num">$43,200<span class="sub">county</span></td>
+  <td class="num">$162,000<span class="sub">plottia</span></td>
+  <td><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001397&batchId=50" target="_blank" rel="noreferrer">19527 HARMAN</a><span class="sub">MELVINDALE · vacant land · Residential-Vacant Land</span></td>
+  <td class="end" data-end="2026-10-22T13:30:00">…</td>
+  <td class="links"><a href="https://waynecountytreasurermi.com/property-details.html?ai_id=261001397&batchId=50" target="_blank" rel="noreferrer">Bid</a> · <a href="https://plottia.com/property/mi/melvindale/19527-harman-st-48122-0ba13940-02db-4f66-baa6-58cce76ead3d" target="_blank" rel="noreferrer">Plottia</a> · <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.27718447949208,-83.19763647946141" target="_blank" rel="noreferrer">Street</a></td>
 </tr>
     </tbody>
   </table>
 </div>
+<script>
+function fmt(d){return d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}
+function tick(){
+  var now=new Date();
+  document.getElementById('clock').textContent='Now: '+now.toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',second:'2-digit'})+' (auction local time)';
+  var hide=document.getElementById('hideClosed').checked;
+  document.querySelectorAll('tr[data-end]').forEach(function(row){
+    var end=new Date(row.getAttribute('data-end'));
+    var cell=row.querySelector('.end');
+    var ms=end-now;
+    if(ms<=0){row.classList.add('closed');cell.textContent='CLOSED '+fmt(end);row.style.display=hide?'none':'';return}
+    row.classList.remove('closed');row.style.display='';
+    var m=Math.floor(ms/60000),h=Math.floor(m/60);
+    cell.textContent=h>0?fmt(end)+' ('+h+'h '+(m%60)+'m)':'in '+m+'m '+Math.floor(ms%60000/1000)+'s';
+    cell.classList.toggle('soon',ms<30*60000);
+  });
+}
+document.getElementById('hideClosed').addEventListener('change',tick);
+tick();setInterval(tick,1000);
+</script>
 </body>
 </html>
