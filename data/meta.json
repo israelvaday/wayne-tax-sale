@@ -81,5 +81,7 @@
   "matchRate": 87,
   "scored": 1448,
   "apnMatches": 1248,
-  "addressMatches": 12
+  "addressMatches": 12,
+  "bidsRefreshedAt": "2026-10-21T16:54:30.675Z",
+  "withBid": 493
 }
